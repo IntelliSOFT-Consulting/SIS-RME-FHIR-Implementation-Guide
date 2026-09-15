@@ -1,0 +1,77 @@
+name: Build FHIR IG
+
+# Builds this Implementation Guide with SUSHI and the official HL7 FHIR IG
+# Publisher on every push/PR, and publishes the QA report and rendered
+# site as workflow artifacts. Requires normal outbound internet access
+# (to tx.fhir.org for terminology validation and to GitHub for the
+# publisher jar); it is not expected to run in network-restricted
+# sandboxes.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Download FHIR IG Publisher
+        run: |
+          mkdir -p input-cache
+          curl -L --fail --show-error \
+            -o input-cache/publisher.jar \
+            "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
+
+      - name: Run FHIR IG Publisher
+        env:
+          JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+        run: java -jar input-cache/publisher.jar -ig .
+
+      - name: Upload rendered site
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-site
+          path: output/
+          if-no-files-found: warn
+
+      - name: Upload QA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: |
+            output/qa.html
+            output/qa.json
+          if-no-files-found: warn
+
+      - name: Fail if the IG Publisher reported errors
+        run: |
+          if [ -f output/qa.json ]; then
+            errors=$(python3 -c "import json; d=json.load(open('output/qa.json')); print(d.get('errs', d.get('errorCount', 0)))" 2>/dev/null || echo "unknown")
+            echo "IG Publisher reported errors: $errors"
+            if [ "$errors" != "0" ] && [ "$errors" != "unknown" ]; then
+              echo "::error::FHIR IG Publisher reported $errors error(s); see the qa-report artifact."
+              exit 1
+            fi
+          fi

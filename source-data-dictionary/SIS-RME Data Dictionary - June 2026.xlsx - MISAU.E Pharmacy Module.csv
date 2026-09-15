@@ -1,0 +1,378 @@
+Activity ID and name*,Data element ID*,Data element label*,FHIR Mapping,Description and definition*,Data Type,Input Options,Quantity subtype,Calculation,Validation condition,Optionality*,Explain conditionality,Functional grouping of data elements,Linkages to decision-support tables,Linkages to scheduling logic tables,Linkages to aggregate indicators,Annotations,CIEL,International Classification of Diseases 11th Revision (ICD-11) code*,ICD-11 Uniform Resource Identifier (URI),ICD-11 code title,ICD-11 relationship,"ICD-11
+comments and considerations","International Classification of Diseases 10th Revision (ICD-10)
+code*",ICD-10 code title,ICD-10 relationship,"ICD-10
+comments and considerations",Logical Observation Identifiers Names and Codes (LOINC) version 2.73 code*,LOINC version 2.73 long common name,LOINC version 2.73 relationship,"LOINC version 2.73
+comments and considerations","International Classification of Health Interventions (ICHI) (Beta 3)
+code*","ICHI
+comments and considerations","International Classification of Functioning, Disability and Health (ICF)
+category*",ICF URI,Systematized Nomenclature of Medicine Clinical Terms (SNOMED) Global Patient Set (GPS) code*,SNOMED GPS preferred name,"SNOMED GPS
+relationship","SNOMED GPS
+comments and considerations"
+Medication Request,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE1,Request Code,,Unique identifier assigned to the medication request.,string,,,,,,,,,,,,,,,,,,,,,,51726-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE2,Request Type,,Category or urgency level of the medication request.,coding,"Weekly
+Bi-weekly
+Monthly
+Emergency
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE3,Weekly,,Indicates that the medication request is scheduled weekly.,codes,,,,,,,,,,,,1099,,,,,,,,,,LA18891-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE4,Bi-weekly,,Indicates that the medication request is scheduled every two weeks.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE5,Monthly,,Indicates that the medication request is scheduled monthly.,codes,,,,,,,,,,,,1098,,,,,,,,,,LA18876-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE6,Emergency,,Indicates that the medication request is urgent or emergency-based.,codes,,,,,,,,,,,,1882,,,,,,,,,,"LA34578-7
+",,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE7,Request date,,Date when the medication request was created or submitted.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE8,Next Request Date,,Scheduled date for the next medication request.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE9,Frequency,,Interval or recurrence pattern for the medication request.,Numeric,,,,,,,,,,,,,,,,,,,,,,LP187186-4,,,,,,,,,,,
+List of medications,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE10,FNM - FNM drug code,,FNM code assigned to the medication in the national medicines formulary.,string,,,,,,,,,,,,,,,,,,,,,,51726-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE11,Name,,Name of the medication.,string,,,,,,,,,,,,,,,,,,,,,,104717-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE12,Amount consumed,,Quantity of medication consumed during the reporting period.,Numeric,,,,,,,,,,,,,,,,,,,,,,82767-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE13,Existing Stock,,Current quantity of medication available in stock.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE14,Quantity to request,,Quantity of medication requested for replenishment.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE15,Order number,,Unique number assigned to the medication order.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE16,Request code,,Unique identifier assigned to the medication request.,string,,,,,,,,,,,,,,,,,,,,,,51726-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE17,Request type,,Category or urgency level of the medication request.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE18,Request Date,,Date when the medication request was created or submitted.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE19,Next Request Date,,Scheduled date for the next medication request.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE20,State,,Current status of the medication request.,coding,"Pending 
+Completed",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE21,Pending,,Indicates that the medication request is awaiting processing or completion.,codes,,,,,,,,,,,,162866,,,,,,,,,,LA29487-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE22,Completed,,Indicates that the medication request has been fulfilled or finalized.,codes,,,,,,,,,,,,,,,,,,,,,,LA6637-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE23,"Request No. - Request Number
+",,Unique number assigned to the medication request record.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE24,Health Unit,,Health facility or unit associated with the medication request.,string,,,,,,,,,,,,1537,,,,,,,,,,	76696-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE25,District,,Administrative district associated with the health facility.,string,,,,,,,,,,,,162689,,,,,,,,,,104933-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE26,Province,,Administrative province associated with the health facility.,string,,,,,,,,,,,,165851,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE27,Outpatient pharmacy,,Outpatient pharmacy responsible for dispensing or managing the medication request.,date,,,,,,,,,,,,,,,,,,,,,,LP172754-6,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE28,MONTH/YEAR,,Reporting month and year associated with the medication request or stock record.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Stock Entry,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE29,Entry guide code,,Unique identifier assigned to the stock entry guide or record.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE30,Guide provider,,Provider or source responsible for issuing the stock entry guide.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE31,Entry date,,Date when the stock entry was recorded.,date,,,,,,,,,,,,,,,,,,,,,,LP74696-3,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE32,Supplier,,Supplier providing the medications or stock items.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE33,Notes,,Additional remarks or comments related to the stock entry.,string,,,,,,,,,,,,,,,,,,,,,,LP74178-2,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE34,Drug Name,,Name of the medication or drug entered into stock.,string,,,,,,,,,,,,,,,,,,,,,,74062-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE35,Lot Number,,Unique batch or lot identifier assigned to the medication.,Numeric,,,,,,,,,,,,,,,,,,,,,,106187-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE36,Expiration date,,Date after which the medication should no longer be used.,date,,,,,,,,,,,,162502,,,,,,,,,,74712-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE37,Loaded Quantity,,Quantity of medication added into stock.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE38,Medication,,Medication associated with the stock transaction.,string,,,,,,,,,,,,,,,,,,,,,,74062-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE39,Lot Number,,Unique batch or lot identifier assigned to the medication.,Numeric,,,,,,,,,,,,,,,,,,,,,,106187-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE40,Quantity requested,,Quantity of medication requested from stock.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE41,Quantity supplied,,Quantity of medication supplied or issued from stock.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE42,Deficit*,,Difference between the quantity requested and the quantity supplied.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE43,Notes,,Additional remarks or comments related to the stock transaction.,string,,,,,,,,,,,,,,,,,,,,,,LP74178-2,,,,,,,,,,,
+Stock Summary,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE44,FNM,,,Numeric,,,,,,,,,,,,,,,,,,,,,,51726-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE45,Drug Name,,,string,,,,,,,,,,,,,,,,,,,,,,74062-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE46,Pharmaceutical Form,,,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE47,Dosage,,,string,,,,,,,,,,,,,,,,,,,,,,LP6801-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE48,Quantity in stock,,,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE49,Average Monthly Consumption,,,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE50,State of Consumption,,,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE51,View expiration date,,,date,,,,,,,,,,,,,,,,,,,,,,74712-1,,,,,,,,,,,
+Stock Movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE52,Drug name,,Name of the medication involved in the stock movement transaction.,string,,,,,,,,,,,,,,,,,,,,,,74062-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE53,Total Quantity in Stock,,Total quantity of the medication currently available in stock.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE54,Operation Type,,Type of stock transaction recorded in the system.,coding,"Adjustment Negative
+Positive Adjustment
+Waste
+Consumption
+Sale
+Improper for Consumption ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE55,Adjustment Negative,,"Stock operation indicating a decrease in recorded stock due to correction, reconciliation, or audit adjustment.",codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE56,Positive Adjustment,,"Stock operation indicating an increase in recorded stock due to correction, reconciliation, or stock correction entry.",codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE57,Waste,,"Stock operation indicating removal of items due to damage, expiry, or loss making them unusable.",codes,,,,,,,,,,,,169093,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE58,Consumption,,Stock operation indicating use of stock for clinical or patient care activities.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE59,Sale,,Stock operation indicating issuance of stock through a sale or dispensing transaction where applicable.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE60,Improper for Consumption,,"Stock operation indicating segregation of items that are not fit for use in care due to quality, damage, or expiry.",codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE61,Lot number,,Batch or lot identifier associated with the medication.,Numeric,,,,,,,,,,,,,,,,,,,,,,106187-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE62,Quantity,,Quantity of medication involved in the stock movement transaction.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE63,Lot validity ,,Validity or expiry status of the medication batch or lot.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE64,Destination,,Destination or receiving unit for the stock movement.,string,,,,,,,,,,,,,,,,,,,,,,LP149978-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE65,Document/Guide Number,,Reference number of the document or guide associated with the stock movement.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE66,Subscriber,,Person or entity responsible for initiating or recording the stock movement.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE67,Notes,,Additional remarks or comments related to the stock movement.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE68,Reason for the Movement,,Justification or reason for the stock movement transaction.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Stock Record,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE69,Start Date ,,Start date of the stock record period.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE70,End Date,,End date of the stock record period.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE71,US,,Health unit or service identifier (US) associated with the record.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE72,District,,Administrative district where the health facility is located.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE73,Province,,Administrative province where the health facility is located.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE74,Ward Name,,Name of the ward associated with the health facility or stock record.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE75,Pharmacy Name,,Name of the pharmacy managing or reporting the stock.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE76,FNM,,FNM code identifying the medication in the national formulary.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE77,"Designation (Name, Dosage, Pharmaceutical Form)",,"Medication details including name, dosage, and pharmaceutical form.",string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE78,Expiration Dates,,Expiration dates of the recorded medication batches.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE79,Movement Date,,Date when a stock movement occurred.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE80,Origin/Destination of the Movement,,Origin or destination location of the stock movement.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE81,Document No.,,Reference number of the document associated with the stock movement.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE82,Tickets,,Quantity of stock received into the facility.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE83,Departures,,Quantity of stock issued or dispatched from the facility.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE84,Negative Adjustments,,Quantity reduced due to negative stock adjustments.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE85,Positive Adjustments,,Quantity increased due to positive stock adjustments.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE86,Waste,,Quantity of stock lost due to waste.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE87,Consumption,,Quantity of stock used for patient consumption or clinical use.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE88,Existing Stock,,Current available stock balance.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE89,Dismissed,,Indicates stock that has been written off or removed from active inventory.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE90,Address,,Physical or administrative address of the health facility or pharmacy.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Stock Inventory,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE91,Inventory Type,,Type of inventory being conducted for stock management purposes.,coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE92,Inventory Date,,Date when the inventory was carried out or recorded.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE93,Closing Date,,Date when the inventory was closed or finalized.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE94,Created By,,User or staff member who created or initiated the inventory record.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE95,State,,Current status of the inventory record.,coding,"Open
+Closed
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE96,Open,,Indicates that the inventory record is currently open and active.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE97,Closed,,Indicates that the inventory record has been closed and finalized.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE98,Notes,,Additional remarks or comments related to the inventory process.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE99,Lot Number,,Batch or lot identifier for the medication included in the inventory.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE100,FNM Code (Non-editable field),,Non-editable FNM code identifying the medication in the national formulary.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE101,Drug name (Non-editable field),,Non-editable name of the medication or drug.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE102,Validity,,Validity or expiration status of the medication lot.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE103,Stock Actual,,System-recorded actual stock quantity before physical counting.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE104,Quantity Counted,,Physically counted quantity of stock during inventory verification.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Record Prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE105,Prescription Number,,Unique identifier assigned to the prescription record.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE106,Date – Prescription date,,Date when the prescription was issued or recorded.,,,,,,,,,,,,,,,,,,,,,,,	82765-9,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE107,Health service,,Health service or facility where the prescription was created.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE108,State – State of prescription,,Current status of the prescription record.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Register Prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE109,Prescription Type,,Category of prescription based on clinical purpose or service type.,coding,"GENERAL
+DIETETICS
+THERAPEUTIC
+INTEREST
+PrEP 
+TPT
+TB
+",,,,,,,,,,,,,,,,,,,,,57833-6,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE110,GENERAL,,General prescription issued for routine or standard medical care.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE111,DIETETICS,,Prescription related to dietary or nutrition-based clinical management.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE112,THERAPEUTIC,,Prescription issued for therapeutic treatment or clinical intervention.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,182816009,,,
+MISAU.E.Pharmacy,MISAU.E.DE113,INTEREST,,Prescription issued based on special clinical interest or program-specific indication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE114,PrEP,,Prescription for pre-exposure prophylaxis (PrEP) for prevention of HIV infection.,codes,,,,,,,,,,,,166536,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE115,TPT,,Prescription for tuberculosis preventive therapy (TPT).,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE116,TB,,Prescription related to tuberculosis (TB) treatment or management.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Register General Medical Prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE117,FNM,,Unique identifier for the medicine based on the national formulary (FNM).,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE118,Name of the medicine (single selection list of medicines),,Name of the prescribed medicine selected from a predefined list of medicines.,coding,,,,,,,,,,,,,,,,,,,,,,74062-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE119,Administration route,,Route through which the medicine is administered to the patient.,coding,"Apply to both eyes.
+Apply to the right eye.
+Apply to the left eye.
+Apply to both ears.
+Apply to the right ear.
+Apply to the left ear.
+EV (Endovenous)
+IM (Intramuscular)
+IV (Intravenous)
+The Vagina (Via Vagina)
+Nebulization
+Oral
+SC (Subcutaneous)
+Sublingual
+Topical
+Cutaneous route
+Via epidural
+Via nasal
+Transdermal route (patch)
+VR (via rectal)
+",,,,,,,,,,,,,,,,,,,,,74051-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE120,Apply to both eyes,,Administration of medicine applied to both eyes.,codes,,,,,,,,,,,,,,,,,,,,,,LA9444-6,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE121,Apply to the right eye,,Administration of medicine applied to the right eye.,codes,,,,,,,,,,,,,,,,,,,,,,LA9444-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE122,Apply to the left eye,,Administration of medicine applied to the left eye.,codes,,,,,,,,,,,,,,,,,,,,,,LA9444-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE123,Apply to both ears,,Administration of medicine applied to both ears.,codes,,,,,,,,,,,,,,,,,,,,,,LA9445-3,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE124,Apply to the right ear,,Administration of medicine applied to the right ear.,codes,,,,,,,,,,,,,,,,,,,,,,LA9445-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE125,Apply to the left ear,,Administration of medicine applied to the left ear.,codes,,,,,,,,,,,,,,,,,,,,,,LA9445-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE126,EV (Endovenous),,Administration of medicine through the endovenous (venous) route.,codes,,,,,,,,,,,,,,,,,,,,,,	LA9437-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE127,IM (Intramuscular),,Administration of medicine through intramuscular injection.,codes,,,,,,,,,,,,,,,,,,,,,,LA9429-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE128,IV (Intravenous),,Administration of medicine through intravenous injection.,codes,,,,,,,,,,,,,,,,,,,,,,LA9437-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE129,The Vagina (Via Vagina),,Administration of medicine via the vaginal route.,codes,,,,,,,,,,,,,,,,,,,,,,LA9459-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE130,Nebulization,,Administration of medicine through nebulization.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE131,Oral,,Administration of medicine taken orally by mouth.,codes,,,,,,,,,,,,,,,,,,,,,,LA20324-2,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE132,SC (Subcutaneous),,Administration of medicine through subcutaneous injection.,codes,,,,,,,,,,,,,,,,,,,,,,	LA9451-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE133,Sublingual,,Administration of medicine placed under the tongue for absorption.,codes,,,,,,,,,,,,,,,,,,,,,,LA20324-2,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE134,Topical,,Administration of medicine applied to the skin surface.,codes,,,,,,,,,,,,,,,,,,,,,,LA20272-3,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE135,Cutaneous route,,Administration of medicine applied through the cutaneous route (skin application).,codes,,,,,,,,,,,,,,,,,,,,,,LA20272-3,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE136,Via epidural,,Administration of medicine delivered via the epidural route.,codes,,,,,,,,,,,,,,,,,,,,,,LA9418-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE137,Via nasal,,Administration of medicine administered through the nasal route.,codes,,,,,,,,,,,,,,,,,,,,,,LA9263-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE138,Transdermal route (patch),,Administration of medicine delivered through a transdermal patch.,codes,,,,,,,,,,,,,,,,,,,,,,LA20272-3,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE139,VR (via rectal),,Administration of medicine administered via the rectal route.,codes,,,,,,,,,,,,,,,,,,,,,,LA9369-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE140,Dose,,Prescribed amount of medication to be administered to the patient.,coding,,,,,,,,,,,,,,,,,,,,,,LP7791-9,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE141,0.5,,Dose value indicating 0.5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE142,1,,Dose value indicating 1 unit of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE143,1.5,,Dose value indicating 1.5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE144,2,,Dose value indicating 2 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE145,2.5,,Dose value indicating 2.5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE146,3,,Dose value indicating 3 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE147,3.5,,Dose value indicating 3.5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE148,4,,Dose value indicating 4 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE149,4.5,,Dose value indicating 4.5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE150,5,,Dose value indicating 5 units of the prescribed medication.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE151,Drug Form,,Pharmaceutical formulation or physical form of the medication.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE152,Treatment duration ,,Total duration of the prescribed treatment regimen for the patient.,Numeric,,,,,,,,,,,,,,,,,,,,,,67453-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE153,Duration Unit,,Unit used to express the duration of the prescribed treatment.,coding,"Days
+Weeks
+Months
+Years
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE154,Days,,Treatment duration measured in days.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE155,Weeks,,Treatment duration measured in weeks.,codes,,,,,,,,,,,,,,,,,,,,,,LA9000-6,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE156,Months,,Treatment duration measured in months.,codes,,,,,,,,,,,,,,,,,,,,,,LA9001-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE157,Years,,Treatment duration measured in years.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE158,Frequency,,How often the medication should be administered within a given time period.,coding,"4/4 hours
+6 hours
+8/8 hours
+12/12 hours
+24/7
+DU (Single Dose)
+SOS
+",,,,,,,,,,,,,,,,,,,,,LP187186-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE159,Prescribed quantity,,Total quantity of medication prescribed to the patient.,Numeric,,,,,,,,,,,,,,,,,,,,,,82774-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE160,Instructions,,Special directions or guidance for how the medication should be taken or used.,string,,,,,,,,,,,,,,,,,,,,,,LP6820-7,,,,,,,,,,,
+Register Dietary Prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE161,Diet type,,Type of diet prescribed for the patient based on clinical or nutritional needs.,coding,"Normal
+Liquid
+Semi-liquid
+Mole
+Band
+Restricted
+Assodica
+Hyposodic
+Hypersodium
+Normosodic
+Low-calorie
+High-calorie
+Normocaloric
+Hypoliquid
+Hyperliquid
+Normoliquid
+Hypoproteic
+Hyperproteic
+Normoproteic
+Diabetic
+Renal
+Vegetarian
+Lactose-free
+",,,,,,,,,,,,,,,,,,,,,	81663-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE162,Normal,,Diet consisting of a standard balanced nutritional intake without restrictions.,codes,,,,,,,,,,,,,,,,,,,,,,	LA15487-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE163,Liquid,,Diet consisting mainly of liquids for easier digestion or clinical management.,codes,,,,,,,,,,,,,,,,,,,,,,LA25011-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE164,Semi-liquid,,Diet consisting of semi-liquid foods for patients with limited chewing or swallowing ability.,codes,,,,,,,,,,,,,,,,,,,,,,LA25011-0,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE165,Soft,,Diet consisting of soft foods that are easy to chew and digest.,codes,,,,,,,,,,,,,,,,,,,,,,	LA26131-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE166,Bland,,Diet consisting of mild foods that avoid strong spices or irritants.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,38226001,,,
+MISAU.E.Pharmacy,MISAU.E.DE167,Restricted,,Diet with general dietary restrictions based on clinical condition.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE168,Low-sodium,,Diet with reduced sodium intake to manage conditions such as hypertension.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,386619000,,,
+MISAU.E.Pharmacy,MISAU.E.DE169,Reduced-sodium,,Diet with moderately reduced sodium intake for clinical management.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE170,High-sodium,,Diet with increased sodium intake based on medical requirement.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE171,Normal-sodium,,Diet with standard sodium intake.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE172,Low-calorie,,Diet with reduced caloric intake for weight or metabolic management.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE173,High-calorie,,Diet with increased caloric intake to support energy or recovery needs.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE174,Normal-calorie,,Diet with standard caloric intake.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE175,Low-fluid,,Diet with restricted fluid intake to manage medical conditions.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE176,High-fluid,,Diet with increased fluid intake based on clinical requirement.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE177,Normal-fluid,,Diet with normal fluid intake.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE178,Low-protein,,Diet with reduced protein intake for clinical management.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE179,High-protein,,Diet with increased protein intake for recovery or nutritional support.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE180,Normal-protein,,Diet with normal protein intake.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE181,Diabetic,,Diet designed for patients with diabetes mellitus.,codes,,,,,,,,,,,,,,,,,,,,,,LA26134-9,,,,,,,,160670007,,,
+MISAU.E.Pharmacy,MISAU.E.DE182,Renal,,Diet designed for patients with kidney-related conditions.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,33489005,,,
+MISAU.E.Pharmacy,MISAU.E.DE183,Vegetarian,,Diet excluding meat and animal-derived products.,codes,,,,,,,,,,,,152693,,,,,,,,,,,,,,,,,,300928006,,,
+MISAU.E.Pharmacy,MISAU.E.DE184,Lactose-free,,Diet excluding lactose-containing foods.,codes,,,,,,,,,,,,,,,,,,,,,,LA25813-9,,,,,,,,78502005,,,
+MISAU.E.Pharmacy,MISAU.E.DE185,Route of Administration,,Route through which food or nutritional support is administered to the patient.,coding,"Oral
+Tube (via feeding tube)
+Parenteral",,,,,,,,,,,,,,,,,,,,,,,,,,,,,410675002,,,
+MISAU.E.Pharmacy,MISAU.E.DE186,Oral,,Administration of nutrition through the mouth (oral feeding).,codes,,,,,,,,,,,,160240,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE187,Tube (via feeding tube),,Administration of nutrition via a feeding tube directly into the gastrointestinal tract.,codes,,,,,,,,,,,,,,,,,,,,,,"LA28170-1
+",,,,,,,,25062003,,,
+MISAU.E.Pharmacy,MISAU.E.DE188,Parenteral,,"Administration of nutrition delivered directly into the bloodstream, bypassing the gastrointestinal tract.",codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,LP75347-2,,,
+MISAU.E.Pharmacy,MISAU.E.DE189,Further observations (free text field),,Additional notes or remarks related to the nutritional prescription or feeding process.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE190,Frequency,,Frequency at which nutrition is provided to the patient.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE191,Duration,,Total duration for which the nutritional regimen is prescribed.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Register Therapeutic Prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE192,Prescription,,Type or details of the therapeutic prescription issued to the patient.,string,,,,,,,,,,,,,,,,,,,,,,LP181204-1,,,,,,,,16076005,,,
+MISAU.E.Pharmacy,MISAU.E.DE193,Further comments,,Additional clinical notes or remarks related to the therapeutic prescription.,string,,,,,,,,,,,,,,,,,,,,,,LP74431-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE194,Date,,Date when the therapeutic prescription was issued or recorded.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE195,Prescriber,,Name or identifier of the clinician who issued the prescription.,string,,,,,,,,,,,,,,,,,,,,,,LP172755-3,,,,,,,,,,,
+ART prescription,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE196,Special Prescription,,Type of prescription categorized under antiretroviral therapy (ART) management.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,182816009,,,
+MISAU.E.Pharmacy,MISAU.E.DE197,Therapeutic Regimen,,Specific ART therapeutic regimen prescribed to the patient.,coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE198,Therapeutic Line,,Line of ART treatment used for the patient’s management.,coding,"First Line
+First Alternative Line
+Second Line
+Third Line",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE199,First Line,,Initial standard ART treatment line for first-time therapy.,codes,,,,,,,,,,,,,XM3U67 ,,,,,T37.5,,,,,,,,,,,,708255002,,,
+MISAU.E.Pharmacy,MISAU.E.DE200,First Alternative Line,,Alternative first-line ART regimen used when standard first-line is not suitable.,codes,,,,,,,,,,,,,XM3U67 ,,,,,T37.5,,,,,,,,,,,,708255002,,,
+MISAU.E.Pharmacy,MISAU.E.DE201,Second Line,,Second-line ART regimen used after failure or change from first-line treatment.,codes,,,,,,,,,,,,,XM3U67 ,,,,,T37.5,,,,,,,,,,,,427314002,,,
+MISAU.E.Pharmacy,MISAU.E.DE202,Third Line,,Third-line ART regimen used for complex or resistant cases.,codes,,,,,,,,,,,,,XM3U67 ,,,,,T37.5,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE203,Duration,,Duration for which the ART prescription is intended.,coding,"One Week
+Two Weeks
+A month
+Two Months
+Three Months
+Six Months
+",,,,,,,,,,,,,,,,,,,,,LP14744-4,,,,,,,,103335007,,,
+MISAU.E.Pharmacy,MISAU.E.DE204,One Week,,ART treatment duration of one week.,codes,,,,,,,,,,,,,,,,,,,,,,LA6308-6,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE205,Two Weeks,,ART treatment duration of two weeks.,codes,,,,,,,,,,,,,,,,,,,,,,LA18875-7,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE206,A month,,ART treatment duration of one month.,codes,,,,,,,,,,,,,,,,,,,,,,LA6304-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE207,Two Months,,ART treatment duration of two months.,codes,,,,,,,,,,,,,,,,,,,,,,LA6304-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE208,Three Months,,ART treatment duration of three months.,codes,,,,,,,,,,,,,,,,,,,,,,LA6304-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE209,Six Months,,ART treatment duration of six months.,codes,,,,,,,,,,,,,,,,,,,,,,LA6304-5,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE210,Clinician Name,,Name of the clinician responsible for prescribing the ART regimen.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE211,Date of next refill,,Date scheduled for the patient’s next medication refill or pickup.,date,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE212,Patient status,,Current treatment status of the patient within the care program.,coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE213,First consultation,,Indicates that the patient is attending the initial consultation or starting treatment.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE214,Subsequent consultations,,Indicates that the patient is attending a follow-up or maintenance consultation.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE215,Change of Line?,,Indicates whether the patient’s therapeutic treatment line has changed.,coding,"Yes
+No",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE216,Yes,,Confirms that the patient’s therapeutic line has changed.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE217,No,,Indicates that the patient’s therapeutic line has not changed.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE218,Reason for change,,Reason for changing the patient’s therapeutic treatment line.,coding,"Therapeutic Failure
+Allergy
+Other",,,,,,,,,,,,,,,,,,,,,83849-0	,,,,,,,,,,,
+,,Therapeutic Failure,,Indicates that the therapeutic line change was due to treatment failure.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,Allergy,,Indicates that the therapeutic line change was due to an allergic reaction or intolerance.,codes,,,,,,,,,,,,,,,,,,,,,,	106165-4,,,,,,,,,,,
+,,Other,,Indicates another reason for changing the therapeutic line.,codes,,,,,,,,,,,,5622,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE219,Specify reason (free text field),,Free text field used to provide additional details about the reason for the therapeutic line change.,codes,,,,,,,,,,,,,,,,,,,,,,LA12724-3,,,,,,,,,,,
+"PrEP,TB,TPT prescription",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE220,Special Prescription,,Indicates whether the prescription is classified as a special prescription.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE221,Reason for Prescription,,Clinical justification or reason for issuing the prescription.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE222,Therapeutic Regimen,,Therapeutic regimen prescribed for the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE223,Duration (of the prescription),,Duration for which the prescription is intended to be used.,,"One Week
+Two Weeks
+One Month
+Two Months
+Three Months
+Six Months",,,,,,,,,,,,,,,,,,,,,LP14744-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE224,One Week,,Prescription duration of one week.,,,,,,,,,,,,,,,,,,,,,,,LA14462-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE225,Two Weeks,,Prescription duration of two weeks.,,,,,,,,,,,,,,,,,,,,,,,LA14462-8,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE226,One Month,,Prescription duration of one month.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE227,Two Months,,Prescription duration of two months.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE228,Three Months,,Prescription duration of three months.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE229,Six Months,,Prescription duration of six months.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE230,Clinician Name,,Name of the clinician responsible for issuing the prescription.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE231,FNM code,,FNM code identifying the medication in the national formulary.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE232,Medication name (Single Selection List),,Name of the prescribed medication selected from a predefined medication list.,,mediaction list,,,,,,,,,,,,,,,,,,,,,LP74145-1,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE233,Dose,,Amount of medication to be administered to the patient.,,,,,,,,,,,,,,,,,,,,,,,LP7791-9,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE234,Dosage Instructions,,Instructions describing how often the medication should be administered.,,"Every 4 hours
+Every 6 hours
+Every 8 hours
+Every 12 hours
+Every 24 hours
+SD (Single Dose)
+SOS",,,,,,,,,,,,,,,,,,,,,LP61561-4,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE235,Every 4 hours,,Medication administration scheduled every 4 hours.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE236,Every 6 hours,,Medication administration scheduled every 6 hours.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE237,Every 8 hours,,Medication administration scheduled every 8 hours.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE238,Every 12 hours,,Medication administration scheduled every 12 hours.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE239,Every 24 hours,,Medication administration scheduled every 24 hours.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE240,SD (Single Dose),,Medication intended for a single administration dose.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE241,SOS,,Medication administered only when necessary or as needed.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE242,Prescribed Quantity,,Total quantity of medication prescribed to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE243,Dispensed Quantity,,Quantity of medication dispensed to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE244,Dispensing Type,,Method or schedule used for dispensing the prescribed medication.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE245,Next refill date,,Date scheduled for the patient’s next medication refill or pickup.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE246,Patient status,,Current treatment status of the patient within the care program.,,"Initiation
+Maintenance",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE247,Initiation,,Indicates that the patient is starting treatment or attending the first consultation.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE248,Maintenance,,Indicates that the patient is continuing treatment under maintenance or follow-up care.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MISAU.E.Pharmacy,MISAU.E.DE249,Dispensing Mode,,Method or schedule used for dispensing medication to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

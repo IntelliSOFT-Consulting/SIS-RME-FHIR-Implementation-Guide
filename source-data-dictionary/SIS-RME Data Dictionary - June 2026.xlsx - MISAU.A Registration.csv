@@ -1,0 +1,255 @@
+Activity ID and name*,Data element ID*,Data element label*,FHIR Mapping,Description and definition*,Data Type,Input Options,Quantity subtype,Calculation,Validation condition,Optionality*,Explain conditionality,Functional grouping of data elements,Linkages to decision-support tables,Linkages to scheduling logic tables,Linkages to aggregate indicators,Annotations,CIEL,International Classification of Diseases 11th Revision (ICD-11) code*,ICD-11 Uniform Resource Identifier (URI),ICD-11 code title,ICD-11 relationship,"ICD-11
+comments and considerations","International Classification of Diseases 10th Revision (ICD-10)
+code*",ICD-10 code title,ICD-10 relationship,"ICD-10
+comments and considerations",Logical Observation Identifiers Names and Codes (LOINC) version 2.73 code*,LOINC version 2.73 long common name,LOINC version 2.73 relationship,"LOINC version 2.73
+comments and considerations","International Classification of Health Interventions (ICHI) (Beta 3)
+code*","ICHI
+comments and considerations","International Classification of Functioning, Disability and Health (ICF)
+category*",ICF URI,Systematized Nomenclature of Medicine Clinical Terms (SNOMED) Global Patient Set (GPS) code*,SNOMED GPS preferred name,"SNOMED GPS
+relationship","SNOMED GPS
+comments and considerations"
+Register/Update User,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.1,First name,,Patient’s given or official first name.,string,,,,,,,,,,,,,,,,,,,,,,LP74855-5,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.2,Other names,,"Additional names of the patient, including middle or last names.",string,,,,,,,,,,,,,,,,,,,,,,LP75019-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.3,Nickname,,Common or preferred informal name used by the patient.,string,,,,,,,,,,,,,,,,,,,,,,LP75170-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.4,Date of birth,,Patient’s recorded date of birth.,date,,,,,,,,,,,,166575,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.5,Estimated age,,Approximate age of the patient when exact date of birth is unknown.,Numeric,,,,,,,,,,,,,,,,,,,,,,21611-9,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.6,unit ,,Unit used to record the estimated age.,coding,"years
+months
+days
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.7,years,,Age recorded in years.,codes,,,,,,,,,,,,1734,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.8,months,,Age recorded in months.,codes,,,,,,,,,,,,1074,,,,,,,,,,LA9001-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.9,days,,Age recorded in days.,codes,,,,,,,,,,,,1072,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.10,Was the child registered at the registry office,,Indicates whether the child has been officially registered at the civil registry office.,coding,"Yes
+No
+Not Confirmed",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.11,Yes,,Confirms the response as yes.,codes,,,,,,,,,,,,,,,,,,,,,,LA33-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.12,No,,Confirms the response as no.,codes,,,,,,,,,,,,,,,,,,,,,,LA32-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.13,Not Confirmed,,Indicates the information has not been verified or confirmed.,codes,,,,,,,,,,,,,,,,,,,,,,LA19738-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.14,Sex,,Biological sex of the patient.,coding,"Masculine
+Feminine
+",,,,,,,,,,,,,,,,,,,,,LL7182-0,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.15,Masculine,,Indicates male sex.,codes,,,,,,,,,,,,1534,,,,,,,,,,LA2-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.16,Feminine,,Indicates female sex.,codes,,,,,,,,,,,,1535,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.17,Race,,Patient’s self-identified racial group.,coding,"Black or African Descent
+White
+Asian
+Multiracial
+Indigenous
+Other
+",,,,,,,,,,,,,,,,,,,,,"32624-9
+",,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.18,Black or African Descent,,Identifies the patient as Black or of African descent.,codes,,,,,,,,,,,,,,,,,,,,,,LA4267-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.19,White,,Identifies the patient as White.,codes,,,,,,,,,,,,,,,,,,,,,,LA23729-9,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.20,Asian,,Identifies the patient as Asian.,codes,,,,,,,,,,,,,,,,,,,,,,LA6156-9,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.21,Multiracial,,Identifies the patient as belonging to more than one racial group.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.22,Indigenous,,Identifies the patient as Indigenous.,codes,,,,,,,,,,,,,,,,,,,,,,LA10326-9,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.23,Other,,Identifies the patient as belonging to another racial category not listed.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.24,Marital Status,,Current marital or relationship status of the patient.,coding,"Single
+Married
+Divorced
+Widow(er)
+Common-law marriage
+",,,,,,,,,,,1054,,,,,,,,,,45404-1,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.25,Single,,Indicates the patient is not married.,codes,,,,,,,,,,,,,,,,,,,,,,LA47-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.26,Married,,Indicates the patient is legally married.,codes,,,,,,,,,,,,,,,,,,,,,,LA48-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.27,Divorced,,Indicates the patient is legally divorced.,codes,,,,,,,,,,,,,,,,,,,,,,LA51-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.28,Widow(er),,Indicates the patient’s spouse is deceased.,codes,,,,,,,,,,,,,,,,,,,,,,	LA49-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.29,Common-law marriage,,Indicates the patient is in a legally recognized cohabiting relationship.,codes,,,,,,,,,,,,160765,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.30,Country of Nationality,,Country where the patient holds citizenship or nationality.,coding,single selection list of countries,,,,,,,,,,,,,,,,,,,,,LP441425-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.31,Province,,Administrative province associated with the patient’s address or origin.,coding,single selection list of provinces in Mozambique,,,,,,,,,,,165851,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.32,District,,Administrative district associated with the patient’s address or origin,coding,single selection list of districts associated with the selected province,,,,,,,,,,,162689,,,,,,,,,,	104933-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.33,Father's Name,,Full name of the patient’s father.,string,,,,,,,,,,,,1594,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.34,Mother's Name,,Full name of the patient’s mother.,string,,,,,,,,,,,,,,,,,,,,,,	19132-0,,,,,,,,,,,
+Identification Information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.35,Document type,,Type of identification document provided by the patient.,coding,"Identity Card
+Birth Certificate
+Voter Registration Card
+Driver’s License
+Passport
+DIRE
+No document",,,,,,,,,,,,,,,,,,,,,92183-3,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.36,Identity Card,,National identity card used for patient identification.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.37,Birth Certificate,,Birth certificate used for patient identification.,codes,,,,,,,,,,,,,,,,,,,,,,71230-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.38,Voter Registration Card,,Voter registration card used for patient identification.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.39,Driver’s License,,Driver’s license used for patient identification.,codes,,,,,,,,,,,,,,,,,,,,,,53245-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.40,Passport,,Passport used for patient identification.,codes,,,,,,,,,,,,166101,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.41,DIRE,,,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.42,No document,,Indicates that the patient does not have an identification document.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.43,Document number,,Unique number assigned to the identification document.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Address and Contact Information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.44,Province,,Administrative province where the patient resides.,coding,,,,,,,,,,,,165851,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.45,District,,Administrative district where the patient resides.,coding,,,,,,,,,,,,162689,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.46,Near ,,Landmark or nearby location used to describe the patient’s residence.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.47,Telephone ,,Patient’s contact telephone number.,Numeric,,,,,,,,,,,,42077-8,,,,,,,,,,42077-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.48,email ,,Patient’s email address.,string,,,,,,,,,,,,170475,,,,,,,,,,89058-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.49,Profession/Occupation,,Patient’s current profession or occupation.,string,,,,,,,,,,,,1542,,,,,,,,,,85658-3,,,,,,,,,,,
+Emergency Contact/Companion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.50,Full Name,,Full name of the emergency contact or companion.,string,,,,,,,,,,,,,,,,,,,,,,	95727-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.51,Degree of relationship,,Relationship between the patient and the contact person,coding,"Father
+Mother
+Grandmother
+Son/Daughter
+Brother/Sister
+Grandson/Granddaughter
+Spouse
+Uncle/Aunt
+Nephew/Niece
+Cousin
+Sister-in-law/Brother-in-law
+Co-sister-in-law / Co-brother-in-law
+Son-in-law
+Father-in-law / Mother-in-law
+Daughter-in-law
+Other",,,,,,,,,,,,,,,,,,,,,104984-0,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.52,Father,,Indicates the contact person is the patient’s father.,codes,,,,,,,,,,,,,,,,,,,,,,74026-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.53,Mother,,Indicates the contact person is the patient’s mother.,codes,,,,,,,,,,,,,,,,,,,,,,"LA10417-6
+",,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.54,Grandmother,,Indicates the contact person is the patient’s grandmother.,codes,,,,,,,,,,,,159772,,,,,,,,,,LA10413-5,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.55,Son/Daughter,,Indicates the contact person is the patient’s son or daughter.,codes,,,,,,,,,,,,972,,,,,,,,,,LA34420-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.56,Brother/Sister,,Indicates the contact person is the patient’s sibling.,codes,,,,,,,,,,,,,,,,,,,,,,LA15645-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.57,Grandson/Granddaughter,,Indicates the contact person is the patient’s grandchild.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.58,Spouse,,Indicates the contact person is the patient’s spouse.,codes,,,,,,,,,,,,,,,,,,,,,,"LA16285-1
+",,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.59,Uncle/Aunt,,Indicates the contact person is the patient’s uncle or aunt.,codes,,,,,,,,,,,,169995,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.60,Nephew/Niece,,Indicates the contact person is the patient’s nephew or niece.,codes,,,,,,,,,,,,1580,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.61,Cousin,,Indicates the contact person is the patient’s cousin.,codes,,,,,,,,,,,,163356,,,,,,,,,,LA32055-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.62,Sister-in-law/Brother-in-law,,Indicates the contact person is the patient’s sibling-in-law.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.63,Co-sister-in-law / Co-brother-in-law,,Indicates the contact person is related through marriage to the patient’s sibling-in-law.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.64,Son-in-law,,Indicates the contact person is the patient’s son-in-law.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.65,Father-in-law / Mother-in-law,,Indicates the contact person is the patient’s parent-in-law.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.66,Daughter-in-law,,Indicates the contact person is the patient’s daughter-in-law.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.67,Other,,Indicates another relationship not listed.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.68,Address ,,Physical address of the emergency contact or companion.,string,,,,,,,,,,,,,,,,,,,,,,	95728-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.69,Telephone ,,Telephone number of the emergency contact or companion.,Numeric,,,,,,,,,,,,,,,,,,,,,,56863-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.70,Email ,,Email address of the emergency contact or companion.,string,,,,,,,,,,,,,,,,,,,,,,LP91370-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.71,Companion,,Indicates the person accompanies the patient during care or visits.,boolean,,,,,,,,,,,,,,,,,,,,,,LA34538-1,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.72,Emergency contact,,Indicates the person to contact in case of emergency.,boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.73,Carer,,Indicates the person responsible for supporting or caring for the patient.,boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.74,Confidant,,Indicates a trusted person designated by the patient.,boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.75,Identifier type,,Type of identification document provided by the contact person.,coding,"Old NID
+NUIT
+NUIC",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.76,Document number ,,Unique number assigned to the identification document of the contact person.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Donor Information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.77,Donor number,,Unique identifier assigned to the blood donor.,Numeric,,,,,,,,,,,,,,,,,,,,,,	44780-5,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.78,Blood type,,Blood group of the donor based on ABO classification.,coding,"O
+A
+B
+AB",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.79,O,,Indicates blood group O.,codes,,,,,,,,,,,,152676/152677,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.80,A,,Indicates blood group A.,codes,,,,,,,,,,,,152674,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.81,B,,Indicates blood group B.,codes,,,,,,,,,,,,152679,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.82,AB,,Indicates blood group AB.,codes,,,,,,,,,,,,152680/152681,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.83,Rhesus factor,,Blood group Rh factor indicating positive or negative status.,coding,"""+""
+""-""",,,,,,,,,,,1429,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.84,"""+""",,Indicates Rh positive blood type.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.85,"""-""",,Indicates Rh negative blood type.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.86,Type of donation,,Category of blood donation provided by the donor.,coding,"Replacement donor
+Screened donor
+Voluntary donor",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.87,Replacement donor,,Donation made to replace blood used by a specific patient.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.88,Screened donor,,Donation from a donor who has undergone screening and eligibility checks.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.89,Voluntary donor,,Donation made voluntarily without targeting a specific recipient.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.90,Previous donations,,Record of past donation history for the donor.,coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.91,Number of donations,,Total count of donations made by the donor.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.92,Location of previous donation,,Facility or place where previous donation(s) occurred.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.93,Date of last donation,,Date when the donor last donated blood.,date,,,,,,,,,,,,,,,,,,,,,,82756-8	,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.94,Reason for donation,,Motivation or context for the donor’s contribution.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.95,Further observations,,Additional clinical or administrative notes related to the donor.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+User Profile,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.96,Doctor,,Indicates whether the patient is assigned to or associated with a doctor.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.97,User:is on a visit,,Indicates whether the patient is currently marked as being on a visit.,coding,"On hold
+triaged
+under observation",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.98,On hold,,Indicates whether the patient’s case or record is temporarily placed on hold.,codes,,,,,,,,,,,,167154,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.99,triaged,,Indicates whether the patient has undergone triage classification.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.100,under observation,,Indicates whether the patient is currently under clinical observation.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Visit Information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.101,Laboratory Test History,,Laboratory test records associated with the patient’s previous visits.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.102,Visit History,,Record of all past clinical visits made by the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.103,Imaging Examination History,,History of imaging or radiology examinations performed on the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.104,Prescription History,,Record of medications previously prescribed to the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.105,Diagnostic History,,History of clinical diagnoses made for the patient.,,,,,,,,,,,,,1628,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.106,History of Procedures Performed,,Record of medical or surgical procedures performed on the patient.,,,,,,,,,,,,,,,,,,,,,,,	47519-4	,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.107,Discharge History,,History of patient discharge events and related details.,,,,,,,,,,,,,,,,,,,,,,,8652-0,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.108,Vital Signs Record,,Recorded measurements of the patient’s vital signs over time.,,,,,,,,,,,,,,,,,,,,,,,8716-3,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.109,Allergies,,Known allergies or adverse reactions recorded for the patient.,,,,,,,,,,,,,,,,,,,T78.4,,,,45675-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.110,Perform Rapid Tests,,Process of conducting point-of-care rapid diagnostic tests for the patient.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.111,Request Laboratory Tests ,,Initiation of laboratory test orders for diagnostic evaluation.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.112,Request Imaging Exams,,Initiation of imaging examination requests for diagnostic evaluation.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.113,Request Treatment,,Initiation of treatment requests based on clinical assessment.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.114,Medical Prescription,,Issuance of medication orders for the patient.,,,,,,,,,,,,,,,,,,,,,,,	57833-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.115,Medical Reassessment,,Clinical review or follow-up assessment of the patient’s condition.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.116,Transfer User,,"Process of transferring the patient to another service, unit, or facility.",,,,,,,,,,,,,,,,,,,,,,,LP97172-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.117,Register,,Creation or registration of a new patient record in the system.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Visit History,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.118,Start Time and End Time,,Start time and end time of the patient’s clinical visit or encounter.,string,,,,,,,,,,,,,,,,,,,,,,LP73517-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.119,Main complaint,,Primary reason or symptom reported by the patient for seeking care.,string,,,,,,,,,,,,,,,,,,,,,,75322-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.120,Clinician's Name,,Name of the clinician responsible for the patient’s consultation.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.121,More details,,Additional clinical notes or contextual details recorded during the visit.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.122,Diagnoses Obtained,,Clinical diagnoses established during the patient’s visit.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.123,Prescriptions,,Medications prescribed to the patient during the visit.,string,,,,,,,,,,,,,,,,,,,,,,57828-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.124,"Additional tests (laboratory, rapid, and imaging) performed and their results.",,"Results of laboratory, rapid, and imaging tests performed during the visit.",string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.125,All information recorded regarding the medical history.,,Comprehensive documentation of the patient’s medical history recorded during the visit.,string,,,,,,,,,,,,,,,,,,,,,,LP128548-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.126,All the information recorded about the objective exam.,,Findings from the physical or objective examination conducted during the visit.,string,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.127,Treatments Performed,,Medical or therapeutic interventions performed during the visit.,string,,,,,,,,,,,,1185,,,,,,,,,,LP267354-1,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.128,"Consultation outcome
+
+",,"Outcome or conclusion of the clinical consultation, including patient status.",coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.129,High (including the type of high),,"Indicates that the patient was discharged from care, including the type of discharge.",codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.130,Transferred (including the type of transfer) ,,"Indicates that the patient was transferred to another facility or service, including the type of transfer.",codes,,,,,,,,,,,,,,,,,,,,,,"LA14103-8
+",,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.131,Absent,,Indicates that the patient did not attend or was not present for the scheduled visit.,codes,,,,,,,,,,,,163747,,,,,,,,,,LA9634-2,,,,,,,,,,,
+Registration of Socioeconomic Profile,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.132,School Level,,School level of the patient’s highest completed or current education.,coding,"None
+Primary
+Secondary
+University",,,,,,,,,,,,,,,,,,,,,LP136084-3,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.133,None,,Indicates that the patient has no formal education.,codes,,,,,,,,,,,,1107,,,,,,,,,,LA137-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.134,Primary,,Indicates that the patient has completed primary education.,codes,,,,,,,,,,,,1713,XE1ZF,,,,,,,,,LA32466-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.135,Secondary,,Indicates that the patient has completed secondary education.,codes,,,,,,,,,,,,1714,XE3CZ,,,,,,,,,LA38-5,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.136,University,,Indicates that the patient has completed university or tertiary education.,codes,,,,,,,,,,,,,XE9BK,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.137,Profession ,,Patient’s current occupation or professional role.,string,,,,,,,,,,,,1542,XE4EE,,,,,,,,,LP133724-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.138,Lives,,Living arrangement category describing where and how the patient resides.,coding,"Lives alone
+Lives in a household/family unit",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.139,Lives alone,,Indicates that the patient lives alone.,codes,,,,,,,,,,,,135704,,,,,,,,,,LA6255-9,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.140,Lives in a household/family unit,,Indicates that the patient lives within a household or family unit.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.141,Employment,,Employment status of the patient.,coding,"Unemployed
+Formal employment
+Informal employment",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.142,Unemployed,,Indicates that the patient is not employed.,codes,,,,,,,,,,,,,,,,,,,,,,LA17956-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.143,Formal employment,,Indicates that the patient has formal employment.,codes,,,,,,,,,,,,165219,,,,,,,,,,LA33155-5,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.144,Informal employment,,Indicates that the patient is engaged in informal employment.,codes,,,,,,,,,,,,,,,,,,,,,,LA32458-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.145,How many people do you live with?,,Number of individuals living in the same household as the patient.,Numeric,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.146,Do you have a source of income?,,Indicates whether the patient has a source of income.,coding,"Yes
+No",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.147,Yes,,Confirms that the patient has a source of income.,codes,,,,,,,,,,,,,,,,,,,,,,LA33-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.148,No,,Indicates that the patient does not have a source of income.,codes,,,,,,,,,,,,,,,,,,,,,,LA32-8,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.149,Profile,,Socioeconomic classification or category assigned to the patient.,coding,"Unemployed or Indigent
+Spouse of Beneficiary
+Blood Donor
+Chronic Patient
+Domestic Worker
+Boarding Student
+Aged 60 years or older
+Unable to work
+Retirees and Pensioners",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.150,Unemployed or Indigent,,Indicates that the patient is unemployed or classified as indigent.,codes,,,,,,,,,,,,123801,,,,,,,,,,LA17956-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.151,Spouse of Beneficiary,,Indicates that the patient is a spouse of a registered beneficiary.,codes,,,,,,,,,,,,,,XE454,,,,,,,,LA9398-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.152,Blood Donor,,Indicates that the patient is registered as a blood donor.,codes,,,,,,,,,,,,,,QB20,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.153,Chronic Patient,,Indicates that the patient is classified as a chronic patient.,codes,,,,,,,,,,,,,,,,,,,,,,LA4634-7,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.154,Domestic Worker,,Indicates that the patient is a domestic worker.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.155,Boarding Student,,Indicates that the patient is a boarding student.,codes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.156,Aged 60 years or older,,Indicates that the patient is aged 60 years or older.,codes,,,,,,,,,,,,,,,,,,,,,,LA16058-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.157,Unable to work,,Indicates that the patient is unable to work.,codes,,,,,,,,,,,,,,,,,,,,,,LA32461-8/LA32460-0,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.158,Retirees and Pensioners,,Indicates that the patient is a retiree or pensioner.,codes,,,,,,,,,,,,,,,,,,,,,,LA17991-3,,,,,,,,,,,
+Register Relationship,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.159,Realtionship type,,Type of relationship between the patient and the registered contact person.,coding,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.160,Mother,,Indicates the patient’s mother.,codes,,,,,,,,,,,,,,,,,,,,,,"LA10417-6
+",,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.161,Father,,Indicates the patient’s father.,codes,,,,,,,,,,,,,,,,,,,,,,74026-6,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.162,Son/Daughter,,Indicates the patient’s son or daughter.,codes,,,,,,,,,,,,,,,,,,,,,,LA34420-2,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.163,Partner,,Indicates the patient’s partner or spouse.,codes,,,,,,,,,,,,,,,,,,,,,,LA9398-4,,,,,,,,,,,
+MOZ.Registration,MOZ.Registration.DE.164,Newborn,,"Indicates that the patient is a newborn infant in the neonatal period, used when registering a mother–child relationship context.",boolean,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

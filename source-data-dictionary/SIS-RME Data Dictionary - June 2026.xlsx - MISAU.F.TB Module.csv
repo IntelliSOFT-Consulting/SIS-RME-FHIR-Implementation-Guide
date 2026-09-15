@@ -1,0 +1,301 @@
+Activity ID and name*,Data element ID*,Data element label*,FHIR Mapping,Description and definition*,Data Type,Input Options,Quantity subtype,Calculation,Validation condition,Optionality*,Explain conditionality,Functional grouping of data elements,Linkages to decision-support tables,Linkages to scheduling logic tables,Annotations,CIEL,"International Classification of Diseases 10th Revision (ICD-10)
+code*",Logical Observation Identifiers Names and Codes (LOINC) version 2.73 code*
+MISAU.TB,MISAU.TB.DE.1,Type of consultation,,Categorizes the patient visit based on their current stage in the TB diagnostic or treatment cycle,coding,"Initial Consultation
+Follow up Consultation",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.2,Initial Consultation,,The first formal clinical encounter with a patient regarding a specific suspected or confirmed TB episode.,codes,,,,,,,,,,,,,"LA7553-6
+"
+MISAU.TB,MISAU.TB.DE.3,Follow up Consultation,,Any subsequent clinical encounter occurring after the initial assessment during the course of TB investigation or treatment.,codes,,,,,,,,,,,,,"LA7553-6
+"
+Disease screening,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.4,Have you been exposed to TB in the last 12 months? ,,,coding,"Yes
+No",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.5,Yes,,,codes,,,,,,,,,,,1065,,LA33-6
+MISAU.TB,MISAU.TB.DE.6,No,,,codes,,,,,,,,,,,1065,,LA32-8
+MISAU.TB,MISAU.TB.DE.7,Symptoms of Tuberculosis?,,,coding,"Yes
+No",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.8,What are the symptoms of tuberculosis?,,,coding,"Fever
+Weight loss 
+Night Sweats
+Cough lasting more than 2 weeks 
+Asthenia
+Contact with TB
+Painless Cervical Lymphadenopathy ",,,,,,,,,,168046,,
+MISAU.TB,MISAU.TB.DE.9,Fever,,,codes,,,,,,,,,,,,,LA7435-6
+MISAU.TB,MISAU.TB.DE.10,Weight loss,,,codes,,,,,,,,,,,,,LP75884-4
+MISAU.TB,MISAU.TB.DE.11,Night Sweats,,,codes,,,,,,,,,,,133027,,LP75171-6
+MISAU.TB,MISAU.TB.DE.12,Cough lasting more than 2 weeks,,,codes,,,,,,,,,,,159799,,
+MISAU.TB,MISAU.TB.DE.13,Asthenia,,,codes,,,,,,,,,,,5226,,
+MISAU.TB,MISAU.TB.DE.14,Contact with TB,,,codes,,,,,,,,,,,170146,,
+MISAU.TB,MISAU.TB.DE.15,Painless Cervical Lymphadenopathy,,,codes,,,,,,,,,,,,,
+Contact Tracing/Family Member Tracing (TB Index Case),,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.16,Age range,,The age category of the person who has been in contact with a confirmed TB index case.,coding,"0 to 4 years
+5 to 14 years
+Age 15 or older",,,Select only one from the dropdown list,C,The system should automatically make this field required if any of the fields in this contact tracing form have been filled in.,,,,,,,	30525-0
+MISAU.TB,MISAU.TB.DE.17,0 to 4 years,,Contacts who are infants or young children under the age of five.,codes,,,,,,,,,,,,,LA14321-6
+MISAU.TB,MISAU.TB.DE.18,5 to 14 years,,Contacts who are school-aged children and young adolescents.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.19,Age 15 or older,,Adult and older adolescent contacts.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.20,Number of Contacts,,The total count of individuals identified as having significant exposure to the index case.,Numeric,,,,,C,The system should automatically make this field required if any of the fields in this contact tracing form have been filled in.,,,,,,,	96551-7
+MISAU.TB,MISAU.TB.DE.21,Contacts traced,,The total number of identified contacts who were successfully reached and underwent an initial clinical screening for TB symptoms.,Numeric,,,,,C,The system should automatically make this field required if any of the fields in this contact tracing form have been filled in.,,,,,,,	96551-8
+MISAU.TB,MISAU.TB.DE.22,Number of contacts initiated by TPT,,"The count of eligible contacts who have officially started a course of TB Preventive Treatment (e.g., Isoniazid, Rifampicin, or combination regimens).",Numeric,,,,,C,The system should automatically make this field required if any of the fields in this contact tracing form have been filled in.,,,,,,,LA12067-7
+MISAU.TB,MISAU.TB.DE.23,Number of contacts initiated by TAT,,"The count of identified contacts who, upon screening, were diagnosed with active TB disease and subsequently started on a full Anti-Tuberculosis Treatment regimen.",Numeric,,,,,C,The system should automatically make this field required if any of the fields in this contact tracing form have been filled in.,,,,,,,LA12067-8
+"General list of TB users (presumptive, susceptible, resistant)",,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.24,Name,,The legal first and middle names of the patient as they appear on their national ID or health card.,string,,,,,,,,,,,166102,,LP72974-6
+MISAU.TB,MISAU.TB.DE.25,Surname,,The family name or last name(s) of the patient.,string,,,,,,,,,,,166103,,LP75019-7
+MISAU.TB,MISAU.TB.DE.26,NID,,"The unique health identification number assigned to the patient to link records across different clinical modules (e.g., TB",string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.27,Presumptive,,"A clinical indicator identifying an individual who presents with symptoms or signs suggestive of TB (e.g., persistent cough, fever, weight loss) but has not yet been bacteriologically confirmed.",coding,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.28,Yes,,Confirmation that the patient meets the clinical criteria for a TB suspect and requires diagnostic investigation,codes,,,,,,,,,,,1065,,LA33-6
+MISAU.TB,MISAU.TB.DE.29,No,,"Indicates that after clinical screening, the patient does not currently show symptoms suggestive of active TB",codes,,,,,,,,,,,1065,,LA32-8
+MISAU.TB,MISAU.TB.DE.30,Type of TB,,The classification of the TB strain based on its response (sensitivity or resistance) to first-line anti-TB drugs.,coding,"sensitive
+resistant",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.31,sensitive,,TB caused by a strain of Mycobacterium tuberculosis that is susceptible to all first-line anti-TB medications,codes,,,,,,,,,,,,,"LA16549-0
+"
+MISAU.TB,MISAU.TB.DE.32,resistant,,TB caused by a strain that does not respond to at least one anti-TB drug.,codes,,,,,,,,,,,156080,,
+MISAU.TB,MISAU.TB.DE.33,TB State,,,coding,"Active TB
+Active TB Follow-up
+Cured
+Complete Treatment 
+Death 
+Treatment Failure 
+Loss of Follow-up
+Not Evaluated",,,,,,,,,,,,	45241-7
+MISAU.TB,MISAU.TB.DE.34,Active TB,,A patient currently diagnosed with disease and undergoing the Intensive Phase of treatment.,codes,,,,,,,,,,,170042,,
+MISAU.TB,MISAU.TB.DE.35,Active TB Follow-up,,A patient who has moved into the Continuation Phase of treatment.,codes,,,,,,,,,,,,,LA9177-2
+MISAU.TB,MISAU.TB.DE.36,Cured,,A bacteriologically confirmed patient who was smear- or culture-negative in the last month of treatment and on at least one previous occasion.,codes,,,,,,,,,,,159791,,
+MISAU.TB,MISAU.TB.DE.37,Complete Treatment ,,A patient who finished treatment according to protocol but does not have a negative lab result in the final month.,codes,,,,,,,,,,,160035,,
+MISAU.TB,MISAU.TB.DE.38,Death ,,A patient who dies for any reason before starting or during the course of TB treatment.,codes,,,,,,,,,,,,,"LA7424-0
+"
+MISAU.TB,MISAU.TB.DE.39,Treatment Failure ,,A patient whose sputum smear or culture is positive after some months during the course of treatment.,codes,,,,,,,,,,,167387,,
+MISAU.TB,MISAU.TB.DE.40,Loss of Follow-up,,A patient who did not start treatment or whose treatment was interrupted,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.41,Not Evaluated,,A patient for whom no treatment outcome is assigned,codes,,,,,,,,,,,160737,,
+Medication intake monitoring log,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.42,Monitoring Location,,,coding,"Health Unit
+Community-based
+Primary Health Care(APS)
+Godmother(Madrinha)
+Godfather(Padrinho)
+Community Health Worker",,,,R,,,,,,,,90119-9
+MISAU.TB,MISAU.TB.DE.43,Health Facility,,Medication is taken at a formal clinical facility (Hospital or Centro de Saúde) under the direct supervision of a nurse or clinician.,codes,,,,,,,,,,,1537,,
+MISAU.TB,MISAU.TB.DE.44,Community-based,,"A general category indicating medication was supervised outside of a health facility, such as at the patient's home or a community gathering point.",codes,,,,,,,,,,,160543,,
+MISAU.TB,MISAU.TB.DE.45,Primary Health Care(APS),,Direct observation occurred through the community-based primary health outreach program.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.46,Godmother(Madrinha),,A female community supporter or family member designated and trained to witness and document the patient's daily medication intake.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.47,Godfather(Padrinho),,A male community supporter or family member designated and trained to witness and document the patient's daily medication intake.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.48,Community Health Worker,,A formal community health worker who visits the patient to supervise treatment and monitor for side effects.,codes,,,,,,,,,,,,,	108253-6	
+MISAU.TB,MISAU.TB.DE.49,Date the medication was taken,,The specific calendar date on which the patient took the prescribed dose of anti-TB medication.,date,,,,,R,,,,,,162881,,
+Initial consultation TB,,,,,,,,,,,,,,,,,,
+Registration for the TB Service,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.50,Provenance,,,coding,"Another Public US
+Private Provider
+Community Agent",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.51,Another Public US,,,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.52,Private Provider,,,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.53,Community Agent,,,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.54,Type of TB,,,coding,"Sensitive
+Resistant",,,,,,,,,,159871,,
+MISAU.TB,MISAU.TB.DE.55,Sensitive,,,codes,,,,,,,,,,,,,LA16549-0
+MISAU.TB,MISAU.TB.DE.56,Resistant,,,codes,,,,,,,,,,,156080,,LA6676-6
+MISAU.TB,MISAU.TB.DE.57,Treatment duration,,,Numeric,,,,,,,,,,,,,67453-1
+MISAU.TB,MISAU.TB.DE.58,TB Treatment Start Date,,,date,,,,,,,,,,,1113,,45242-5
+Risk Group,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.59,TB Contact,,"Close contacts are people who share the same breathing space for prolonged periods, typically household residents, but often includes people at work, school, and places of recreation. The precise duration and degree of contact that constitutes risk varies because TB patients vary greatly in infectiousness.",boolean,,,,,O,,,,,,124068,,
+MISAU.TB,MISAU.TB.DE.60,Health Worker (TS),,Staff working in healthcare settings who are at high risk of occupational exposure to TB patients,boolean,,,,,,,,,,,,,LA18966-4
+MISAU.TB,MISAU.TB.DE.61,Miner,,"Current workers in the mining industry, often exposed to dust and crowded living/working conditions.",boolean,,,,,,,,,,,165202,,
+MISAU.TB,MISAU.TB.DE.62,Former Miner,,Retired or ex-mining workers who may have delayed onset of respiratory diseases related to their previous occupation.,boolean,,,,,,,,,,,165202,,
+MISAU.TB,MISAU.TB.DE.63,Exposed to Silica,,"Individuals with a history of inhaling silica dust (Silicosis), which significantly increases the risk of developing active TB.",boolean,,,,,,,,,,,,,LP36406-4
+MISAU.TB,MISAU.TB.DE.64,Prisoner,,Individuals currently incarcerated in prisons or correctional facilities where overcrowding increases transmission risk,boolean,,,,,,,,,,,170028,,
+MISAU.TB,MISAU.TB.DE.65,Prison Officer,,Staff working within correctional facilities who face high occupational exposure due to the environment,boolean,,,,,,,,,,,169147,,
+MISAU.TB,MISAU.TB.DE.66,Conglomerate Resident,,"People living in high-density informal settlements, slums, or institutional housing",boolean,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.67,Other,,A category for patients who belong to a high-risk group not explicitly listed above,boolean,,,,,,,,,,,5622,,
+MISAU.TB,MISAU.TB.DE.68,Specify (other),,"A free-text field used to provide details when the ""Other"" risk group category is selected.",string,,,,,C,"The system should only display this field if the “Other” checkbox is selected. Once the “Other” checkbox is selected, this field must be mandatory (required).",,,,,,,LA27210-6
+Risk Factors,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.69,HIV Positive,,Confirmed presence of Human Immunodeficiency Virus infection. This is the most significant risk factor for TB,boolean,,,,,O,,,,,,138571,,
+MISAU.TB,MISAU.TB.DE.70,Smoker,,Current or history of tobacco use.,boolean,,,,,O,,,,,,152722,,	64234-8	
+MISAU.TB,MISAU.TB.DE.71,Diabetes,,Presence of Diabetes Mellitus.,boolean,,,,,O,,,,,,119481,,33248-6
+MISAU.TB,MISAU.TB.DE.72,Alcohol consumption,,Regular or heavy alcohol use,boolean,,,,,O,,,,,,,,
+MISAU.TB,MISAU.TB.DE.73,Illegal Drugs,,History of illicit drug use,boolean,,,,,O,,,,,,,,LA29718-6
+MISAU.TB,MISAU.TB.DE.74,Other,,Any other clinical or behavioral condition that predisposes the patient to TB,boolean,,,,,C,Only displayed if “Other” is selected. Must be mandatory once “Other” is selected.,,,,,5622,,LA46-8
+MISAU.TB,MISAU.TB.DE.75,Specify (other),,"Free-text field to document the specific risk factor identified when ""Other"" is selected.",string,,,,,C,,,,,,,,LA27210-6
+Tuberculosis Characterization,,,,,,,,,,,,,,,,,,
+SECTION: Location of TB,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.76,Pulmonary,,TB that specifically affects the lung,boolean,,,,,,,,,,,113491,,
+MISAU.TB,MISAU.TB.DE.77,Severe P.,,A sub-classification of Pulmonary TB indicating extensive lung damage,boolean,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.78,Non-Severe P.,,Pulmonary TB with limited lung involvement and absence of severe clinical symptoms.,boolean,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.79,Extrapulmonary,,TB affecting organs other than the lungs,boolean,,,,,,,,,,,5042,,
+MISAU.TB,MISAU.TB.DE.80,Location (Extrapulmonary),,A specific detail field used to name the organ or system affected outside the lungs.,boolean,,,,,,,,,,,,,
+SECTION:Bacteriological Confirmation,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.81,Bacteriologically confirmed,,Indicates that the tuberculosis diagnosis was confirmed through bacteriological laboratory testing.,boolean,,,,,O,,,,,,164397,A15.0,
+MISAU.TB,MISAU.TB.DE.82,Clinically Diagnosed,,Indicates that the tuberculosis diagnosis was established based on clinical assessment and findings without bacteriological confirmation.,boolean,,,,,O,,,,,,,,
+SECTION: Prior Treatment of TB,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.83,New Case,,Indicates a patient who has never received tuberculosis treatment before.,boolean,,,,,O,,,,,,160567,,
+MISAU.TB,MISAU.TB.DE.84,Relapse,,Indicates a patient who has been treated for tuberculosis in the past and has developed a recurrence of the disease.,boolean,,,,,O,,,,,,159875,,
+MISAU.TB,MISAU.TB.DE.85,Treatment After Loss to Follow-up,,Indicates a patient who has resumed tuberculosis treatment after previously being lost to follow-up.,boolean,,,,,O,,,,,,159798,,
+MISAU.TB,MISAU.TB.DE.86,Treatment After Treatment Failure,,Indicates a patient who is receiving tuberculosis treatment after a previous treatment failure.,boolean,,,,,O,,,,,,159798,,
+MISAU.TB,MISAU.TB.DE.87,Previous Treatment Unknown,,Indicates that the patient’s previous tuberculosis treatment history is not known.,boolean,,,,,O,,,,,,,,
+MISAU.TB,MISAU.TB.DE.88,Other,,Indicates a tuberculosis case that does not fall under standard classification categories.,boolean,,,,,O,,,,,,5622,,LA46-8
+MISAU.TB,MISAU.TB.DE.89,Specify (Other),,Free text field used to specify additional details when “Other” is selected.,string,,,,,C,"The system should only display this field if the “Other” check-box is selected. Once the “Other” check-box is selected, this field becomes mandatory.",,,,,,,LA27210-6
+Previous Treatment History,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.90,Start Date,,Start date of the previous tuberculosis treatment episode.,date,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,1113,,45242-5
+MISAU.TB,MISAU.TB.DE.91,End Date,,End date of the previous tuberculosis treatment episode.,date,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,159431,,63939-3
+MISAU.TB,MISAU.TB.DE.92,Treatment Regimen,,Antituberculosis drug regimen used during the previous treatment episode.,coding,"- Rifampicin (R) + Isoniazid (H) + Ethambutol (E) + Pyrazinamide (Z)
+- Rifampicin (R) + Isoniazid (H) + Pyrazinamide (Z)
+- Rifampicin (R) + Isoniazid (H)",,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,170061,,
+MISAU.TB,MISAU.TB.DE.93,Rifampicin (R) + Isoniazid (H) + Ethambutol (E) + Pyrazinamide (Z),,"Regimen consisting of Rifampicin (R), Isoniazid (H), Ethambutol (E), and Pyrazinamide (Z).",codes,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,1131,,
+MISAU.TB,MISAU.TB.DE.94,Rifampicin (R) + Isoniazid (H) + Pyrazinamide (Z),,"Regimen consisting of Rifampicin (R), Isoniazid (H), and Pyrazinamide (Z).",codes,,,,,,,,,,,768,,
+MISAU.TB,MISAU.TB.DE.95,Rifampicin (R) + Isoniazid (H),,Regimen consisting of Rifampicin (R) and Isoniazid (H).,codes,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,1194,,
+MISAU.TB,MISAU.TB.DE.96,Months,,Duration of the previous tuberculosis treatment expressed in months.,Numeric,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,1074,,LP431243-7
+MISAU.TB,MISAU.TB.DE.97,Result,,Outcome of the previous tuberculosis treatment episode.,string,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,159786,,
+"Comorbidities (HIV, diabetes)",,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.98,Pathology,,Type or category of co-existing medical condition or pathology.,coding,"Diabetes
+Hypertension (HTN)
+Liver Disease
+Kidney Disease
+Mental Illness
+Epilepsy
+Malnutrition
+Others",,,,C,The system must automatically make this field mandatory if any of the fields in Screen 6 have been completed,,,,,,,LP7839-6
+MISAU.TB,MISAU.TB.DE.99,Diabetes,,Presence of diabetes mellitus as a comorbid condition.,codes,,,,,C,,,,,,,,LA10529-8
+MISAU.TB,MISAU.TB.DE.100,Hypertension,,Presence of hypertension as a comorbid condition.,codes,,,,,C,,,,,,117399,,LA7444-8
+MISAU.TB,MISAU.TB.DE.101,Liver Disease,,Presence of liver disease as a comorbid condition.,codes,,,,,C,,,,,,,,LA25810-5
+MISAU.TB,MISAU.TB.DE.102,Kidney Disease,,Presence of kidney disease as a comorbid condition.,codes,,,,,C,,,,,,145438,,LA10528-0
+MISAU.TB,MISAU.TB.DE.103,Mental Illness,,Presence of mental illness as a comorbid condition.,codes,,,,,C,,,,,,134337,,LA18599-3
+MISAU.TB,MISAU.TB.DE.104,Epilepsy,,Presence of epilepsy as a comorbid condition.,codes,,,,,C,,,,,,,,LA16985-6
+MISAU.TB,MISAU.TB.DE.105,Malnutrition,,Presence of malnutrition as a comorbid condition.,codes,,,,,C,,,,,,,,LA18401-2
+MISAU.TB,MISAU.TB.DE.106,Others,,Indicates other comorbid conditions not listed in predefined categories.,codes,,,,,C,,,,,,5622,,LA46-8
+MISAU.TB,MISAU.TB.DE.107,Specify (Other),,Free text field used to specify additional comorbid conditions under “Other.”,string,,,,,C,"The system should only display this field if the “Others” option in the “Condition” field has been selected.Once the “Others” option is selected, this field becomes mandatory.",,,,,,,LA27210-6
+MISAU.TB,MISAU.TB.DE.108,Date,,Date when the comorbid condition was recorded or assessed.,date,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,,,LP182451-7
+MISAU.TB,MISAU.TB.DE.109,Treatment,,Treatment provided for the identified comorbid condition.,string,,,,,C,The system must automatically make this field mandatory if any of the fields in Screen 5 have been completed.,,,,,,,LP267354-1
+Complaint & History of Present Illness,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.110,Main Complaint,,Primary symptom or reason for the patient’s visit or consultation.,string,,,,,,,,,,,160531,,LP156501-1
+MISAU.TB,MISAU.TB.DE.111,Current medical history,,Clinical description of the patient’s current illness or presenting condition.,string,,,,,,,,,,,,,LP128548-7
+MISAU.TB,MISAU.TB.DE.112,Psychomotor Development,,Assessment of the patient’s psychomotor development status.,string,,,,,,,,,,,160277,,
+Menstrual History and Pregnancy/Lactation History,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.113,Menarche,,Age at which the patient experienced the first menstrual period.,,,,,,,,,,,,154175,,
+MISAU.TB,MISAU.TB.DE.114,Age ,,Age associated with menarche or menopause history.,,,,,,,,,,,,,,30525-0
+MISAU.TB,MISAU.TB.DE.115,Menopause,,Indicates whether the patient has reached menopause.,,,,,,,,,,,,134346,,
+MISAU.TB,MISAU.TB.DE.116,Date of the second-to-last menstrual period (date type field),,Date of the patient’s second-to-last menstrual period.,,,,,,,,,,,,1427,,8665-2
+MISAU.TB,MISAU.TB.DE.117,Date of last menstrual period (Date type field),,Date of the patient’s most recent menstrual period.,,,,,,,,,,,,1427,,8665-2
+MISAU.TB,MISAU.TB.DE.118,Periodicity of cycles in days (numeric field),,Average duration of the menstrual cycle measured in days.,,,,,,,,,,,,160597,,3144-3
+MISAU.TB,MISAU.TB.DE.119,Flow characteristics (free text box),,Description of menstrual flow characteristics recorded as free text.,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.120,Pregnant,,Indicates whether the patient is currently pregnant.,coding,"Yes
+No",,,,,,,,,,5272,,
+MISAU.TB,MISAU.TB.DE.121,Gestational age in weeks,,Gestational age of the pregnancy measured in weeks.,Numeric,,,,,,,,,,,165220,,49051-6
+MISAU.TB,MISAU.TB.DE.122,Breastfeeding ,,Indicates whether the patient is currently breastfeeding.,coding,"Yes
+No",,,,,,,,,,169176,,LP267627-0
+Physical examination,,,,,,,,,,,,,,,,,,
+,,Check general module Tab for these data elements,,"Regarding this screen, the system should display the existing Objective Examination form described in line [number].AU_FR 3.2, section:Physical examination Regional of the documentRegarding this screen, the system should display the existing Objective Examination form described in line [number].AU_FR 3.2, section:Physical examination Regional",,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.123,Mucous membranes,,Assessment findings related to the patient’s mucous membranes during physical examination.,string,,,,,,,,,,,,,LP30530-7
+MISAU.TB,MISAU.TB.DE.124,Respiratory,,Assessment findings related to the patient’s respiratory system during physical examination.,string,,,,,,,,,,,,,LP29718-1
+MISAU.TB,MISAU.TB.DE.125,Abdomen,,Assessment findings related to the patient’s abdominal examination.,string,,,,,,,,,,,,,LP6990-8
+MISAU.TB,MISAU.TB.DE.126,Neuromuscular,,Assessment findings related to the patient’s neuromuscular system during physical examination.,string,,,,,,,,,,,,,LP31403-6
+Laboratory Tests (BACTERIOLOGY),,,,,,,,,,,,,,,,,,
+Request Laboratory Tests,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.127,Priority ,,Priority level assigned to the laboratory test request.,coding,"Normal
+Urgent
+",,,,,,,,,,,,82768-3
+MISAU.TB,MISAU.TB.DE.128,Normal,,Indicates that the laboratory test request is routine and not time-critical.,codes,,,,,,,,,,,,,LA9035-2
+MISAU.TB,MISAU.TB.DE.129,Urgent,,Indicates that the laboratory test request requires immediate attention or expedited processing.,codes,,,,,,,,,,,,,LA26675-1
+MISAU.TB,MISAU.TB.DE.130,Laboratory test,,Type or name of the laboratory test being requested.,coding,single selection list with options for the names of laboratory tests ,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.131,Technical Group,,Technical or diagnostic category associated with the laboratory test.,coding,single selection list with options for the types of laboratory tests configured in the system,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.132,Exam Date ,,Date scheduled or recorded for the laboratory examination.,date,,,,,,,,,,,,,
+Previously registered results,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.133,Priority (not editable),,Priority level assigned to the laboratory test request (not editable).,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.134,Request date (not editable),,Date when the laboratory test was requested (not editable).,date,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.135,Exam date (not editable),,Date when the laboratory examination was performed (not editable).,date,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.136,Name of the clinician who requested the exam (not editable),,Name of the clinician who requested the laboratory test (not editable).,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.137,Name of the Laboratory Testing Group,,Name of the laboratory testing group responsible for processing the test.,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.138,Number (non-editable),,Unique identifier number for the laboratory test record (non-editable).,Numeric,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.139,Exam Name (not editable),,Name of the laboratory test performed (not editable).,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.140,Result (not editable),,Result of the laboratory test (not editable).,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.141,Reference Value,,Reference or normal value used for comparison of test results.,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.142,Microscopy,,Microscopy test result for tuberculosis detection.,string,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.143,Xpert,,Xpert MTB/RIF test result for tuberculosis and rifampicin resistance detection.,string,,,,,,,,,,,170389,,
+MISAU.TB,MISAU.TB.DE.144,LAM(Lipoarabinomannan),,LAM (Lipoarabinomannan) test result for tuberculosis detection.,string,,,,,,,,,,,167459,,95127-7
+MISAU.TB,MISAU.TB.DE.145,Culture,,Culture test result for tuberculosis bacterial growth detection.,string,,,,,,,,,,,,,LP6209-3
+Imaging,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.146,Radiology Tests ,,,,(List of available radiological tests),,,,,,,,,,,,LP29684-5
+MISAU.TB,MISAU.TB.DE.147,MRI - Magnetic Resonance Imaging ,,,,(List of available MRI tests),,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.148,Ultrasound ,,,,(List of available ultrasound examinations),,,,,,,,,,852,,LP6572-4
+MISAU.TB,MISAU.TB.DE.149,Further observations ,,,string,,,,,,,,,,,,,LP175626-3
+MISAU.TB,MISAU.TB.DE.150,Exam date ,,,,,,,,,,,,,,,,
+TB Counseling,,,,,,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.151,Adherence Risk Factors,,Assessment of factors that may affect adherence to tuberculosis treatment.,coding,"History of loss to follow-up
+Substance/alcohol abuse
+Drug intolerance
+Signs of depression/anxiety
+Lack of family support
+Lack of food
+Transport problems
+Lives far from health facility
+Unemployment / financial constraints
+Cultural or traditional factors
+Stigma / discrimination
+Feels very sick / tired
+Does not believe diagnosis
+Believes cured
+Too many pills
+Fear of adverse drug reactions",,,,O,,,,,,,,LP73299-7
+MISAU.TB,MISAU.TB.DE.152,History of loss to follow-up,,Indicates a previous history of treatment interruption or loss to follow-up.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.153,Substance/alcohol abuse,,Indicates substance or alcohol abuse that may affect treatment adherence.,codes,,,,,,,,,,,,,LA32628-2
+MISAU.TB,MISAU.TB.DE.154,Drug intolerance,,Indicates intolerance or adverse reactions to prescribed medication.,codes,,,,,,,,,,,141746,,
+MISAU.TB,MISAU.TB.DE.155,Signs of depression/anxiety,,Indicates signs or symptoms of depression or anxiety.,codes,,,,,,,,,,,,,LP267437-4
+MISAU.TB,MISAU.TB.DE.156,Lack of family support,,Indicates lack of family or caregiver support for treatment adherence.,codes,,,,,,,,,,,,,LA32587-0
+MISAU.TB,MISAU.TB.DE.157,Lack of food,,Indicates inadequate access to food or nutrition support.,codes,,,,,,,,,,,119533,,
+MISAU.TB,MISAU.TB.DE.158,Transport problems,,Indicates transportation-related barriers affecting access to care.,codes,,,,,,,,,,,820,,
+MISAU.TB,MISAU.TB.DE.159,Lives far from health facility,,Indicates that the patient lives far from the health facility.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.160,Unemployment / financial constraints,,Indicates unemployment or financial difficulties affecting treatment adherence.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.161,Cultural or traditional factors,,Indicates cultural or traditional beliefs influencing treatment adherence.,codes,,,,,,,,,,,,,LA18905-2
+MISAU.TB,MISAU.TB.DE.162,Stigma / discrimination,,Indicates experiences of stigma or discrimination related to illness or treatment.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.163,Feels very sick / tired,,Indicates that the patient feels too ill or fatigued to continue treatment consistently.,codes,,,,,,,,,,,,,LA29183-3
+MISAU.TB,MISAU.TB.DE.164,Does not believe diagnosis,,Indicates that the patient doubts or does not accept the tuberculosis diagnosis.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.165,Believes cured,,Indicates that the patient believes they are already cured and no longer need treatment.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.166,Too many pills,,Indicates that the patient feels overwhelmed by the number of prescribed medications.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.167,Fear of adverse drug reactions,,Indicates fear of adverse drug reactions affecting treatment adherence.,codes,,,,,,,,,,,,,LA32558-1
+MISAU.TB,MISAU.TB.DE.168,Mental Health Screening,,Screening assessment of the patient’s mental health status.,coding,"No Mental Illness
+Common Mental Disorder
+Severe Mental Disorder
+Suicide Risk",,,,,,,,,,,,LP56813-6
+MISAU.TB,MISAU.TB.DE.169,No Mental Illness,,Indicates no identified mental illness during assessment.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.170,Common Mental Disorder,,Indicates presence of a common mental health disorder.,codes,,,,,,,,,,,134337,,
+MISAU.TB,MISAU.TB.DE.171,Severe Mental Disorder,,Indicates presence of a severe mental health disorder.,codes,,,,,,,,,,,134337,,
+MISAU.TB,MISAU.TB.DE.172,Suicide Risk,,Indicates risk of self-harm or suicide identified during assessment.,codes,,,,,,,,,,,112411,,LP36302-5
+MISAU.TB,MISAU.TB.DE.173,Adherence counseling,,Indicates whether adherence counseling was provided to the patient.,coding,"Yes
+No",,,,,,,,,,5488,,
+MISAU.TB,MISAU.TB.DE.174,Yes,,Confirms that adherence counseling was provided.,codes,,,,,,,,,,,1065,,LA33-6
+MISAU.TB,MISAU.TB.DE.175,No,,Indicates that adherence counseling was not provided.,codes,,,,,,,,,,,1065,,LA32-8
+MISAU.TB,MISAU.TB.DE.176,Mental Health Intervention,,Indicates whether a mental health intervention was provided to the patient.,coding,"Yes
+No",,,,,,,,,,163311,,
+MISAU.TB,MISAU.TB.DE.177,Yes,,Confirms that a mental health intervention was provided.,codes,,,,,,,,,,,1065,,LA33-6
+MISAU.TB,MISAU.TB.DE.178,No,,Indicates that a mental health intervention was not provided.,codes,,,,,,,,,,,1065,,LA32-8
+MISAU.TB,MISAU.TB.DE.179,Social Support,,Type of social support provided to support treatment adherence.,coding,"Food Basket
+Social Incentive",,,,,,,,,,5486,,
+MISAU.TB,MISAU.TB.DE.180,Food Basket,,Indicates provision of food assistance or food basket support.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.181,Social Incentive,,Indicates provision of social or material incentives to support adherence.,codes,,,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.182,Treatment Interruption,,Indicates whether the patient experienced interruption of tuberculosis treatment.,coding,"Yes
+No",,,,,,,,,,160016,,
+MISAU.TB,MISAU.TB.DE.183,Patient Found,,Indicates whether the patient who interrupted treatment was traced or located.,coding,"Yes
+No",,,,,,,,,,,,
+MISAU.TB,MISAU.TB.DE.184,Patient Returned,,Indicates whether the patient returned to care after treatment interruption.,coding,"Yes
+No",,,,,,,,,,164097,,
+Schedule Next Appointment,,,,,,,,,,,,,,,,,,
+,,Check general module Tab for these data elements,,"Regarding this screen, the system should display the existing appointment booking form described in the document.Schedule a Requirements Specification Consultation",,,,,,,,,,,,,,
+TB Follow-up Consultation,,,,,,,,,,,,,,,,,,
+TB Adherence Assessment,,,,,,,,,,,,,,,,,,
+MOZ.TB,MISAU.TB.DE.185,TB Adherence Assessment,,Evaluation of the patient’s adherence to the tuberculosis treatment regimen.,coding,"Good (≥80% of monthly doses taken)
+Poor (<80% of monthly doses taken)",,,,,,,,,,164075,,LP421058-1
+MOZ.TB,MISAU.TB.DE.186,Good (≥80% of monthly doses taken),,"Indicates good adherence, with at least 80% of prescribed monthly doses taken.",codes,,,,,,,,,,,159405,,
+MOZ.TB,MISAU.TB.DE.187,Poor (<80% of monthly doses taken),,"Indicates poor adherence, with less than 80% of prescribed monthly doses taken.",codes,,,,,,,,,,,159407,,
+Side Effects,,,,,,,,,,,,,,,,,,
+MOZ.TB,,Check general module Tab for these data elements,,,,,,,,,,,,,,,,
+Treatment outcome,,,,,,,,,,,,,,,,,,
+MOZ.TB,MISAU.TB.DE.188,Treatment Outcome Date,,Date when the tuberculosis treatment outcome was recorded.,date,,,,,C,"Yes, if “Treatment Outcome” field is filled",,,,,159787,,
+MOZ.TB,MISAU.TB.DE.189,Treatment Outcome,,Final outcome status of the patient’s tuberculosis treatment.,coding,"Cured
+Treatment Completed
+Death
+Treatment Failure
+Loss to Follow-up
+Not Evaluated",,,,,,,,,,159786,,
+MOZ.TB,MISAU.TB.DE.190,Cured,,Indicates that the patient completed treatment and met the criteria for cure.,codes,,,,,,,,,,,159791,,
+MOZ.TB,MISAU.TB.DE.191,Treatment Completed,,Indicates that the patient completed the prescribed tuberculosis treatment regimen.,codes,,,,,,,,,,,1663,,
+MOZ.TB,MISAU.TB.DE.192,Death,,Indicates that the patient died during the course of tuberculosis treatment.,codes,,,,,,,,,,,160034,,
+MOZ.TB,MISAU.TB.DE.193,Treatment Failure,,Indicates that the tuberculosis treatment did not achieve the expected clinical outcome.,codes,,,,,,,,,,,159874,,
+MOZ.TB,MISAU.TB.DE.194,Loss to Follow-up,,Indicates that the patient discontinued treatment or could not be traced for follow-up.,codes,,,,,,,,,,,5240,,
+MOZ.TB,MISAU.TB.DE.195,Not Evaluated,,Indicates that the treatment outcome was not assessed or documented.,codes,,,,,,,,,,,160737,,
