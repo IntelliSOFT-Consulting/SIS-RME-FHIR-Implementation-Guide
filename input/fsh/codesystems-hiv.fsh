@@ -11,6 +11,7 @@ CodeSystem: SISRMEHIVTestType
 Id: sisrme-hiv-test-type
 Title: "SIS-RME HIV Test Type"
 Description: "Type of HIV test performed (MISAU.C.DE2)."
+* ^experimental = true
 * ^caseSensitive = true
 * #rapid-test "Rapid test"
 * #pcr "PCR"
@@ -19,6 +20,7 @@ CodeSystem: SISRMEPCRResult
 Id: sisrme-pcr-result
 Title: "SIS-RME PCR Result"
 Description: "Result of a virologic (PCR) HIV test for early infant diagnosis (MISAU.C.DE6, DE8)."
+* ^experimental = true
 * ^caseSensitive = true
 * #positive "Positive"
 * #negative "Negative"
@@ -28,6 +30,7 @@ CodeSystem: SISRMEDefinitiveDiagnosticCriteria
 Id: sisrme-definitive-diagnostic-criteria
 Title: "SIS-RME Definitive HIV Diagnostic Criteria"
 Description: "The criteria used to establish a definitive HIV diagnosis (MISAU.C.DE10)."
+* ^experimental = true
 * ^caseSensitive = true
 * #positive-rapid-test "Positive rapid test"
 * #positive-pcr "Positive PCR"
@@ -38,6 +41,7 @@ CodeSystem: SISRMETPTRegimen
 Id: sisrme-tpt-regimen
 Title: "SIS-RME TPT (TB Preventive Therapy) Regimen"
 Description: "Regimen used for TB preventive therapy (MISAU.C.DE23)."
+* ^experimental = true
 * ^caseSensitive = true
 * #3hp "3HP (weekly rifapentine + isoniazid, 3 months)"
 * #6h "6H (daily isoniazid, 6 months)"
@@ -48,6 +52,7 @@ CodeSystem: SISRMEWHOClinicalStage
 Id: sisrme-who-clinical-stage
 Title: "SIS-RME WHO HIV Clinical Stage"
 Description: "WHO clinical staging of HIV disease (MISAU.C.DE18, DE56), used both at ART initiation and at the current visit."
+* ^experimental = true
 * ^caseSensitive = true
 * #stage-1 "WHO Clinical Stage 1"
 * #stage-2 "WHO Clinical Stage 2"
@@ -58,6 +63,7 @@ CodeSystem: SISRMEScreeningResult
 Id: sisrme-screening-result
 Title: "SIS-RME Screening Result"
 Description: "Outcome of a clinical screening performed during an HIV consultation (MISAU.C.DE36-40: STI, cervical cancer, diabetes, TB, hypertension screening)."
+* ^experimental = true
 * ^caseSensitive = true
 * #not-done "Not done"
 * #negative "Negative/Not suspected"
@@ -68,6 +74,7 @@ CodeSystem: SISRMEFamilyPlanningMethod
 Id: sisrme-family-planning-method
 Title: "SIS-RME Family Planning Method"
 Description: "Family planning method in current use (MISAU.C.DE43-44)."
+* ^experimental = true
 * ^caseSensitive = true
 * #none "None"
 * #condoms "Condoms"
@@ -82,6 +89,7 @@ CodeSystem: SISRMEDSDState
 Id: sisrme-dsd-state
 Title: "SIS-RME Differentiated Service Delivery (MDS) State"
 Description: "Enrollment state in a Differentiated Service Delivery Model (Modelo Diferenciado de Serviços) (MISAU.C.DE60)."
+* ^experimental = true
 * ^caseSensitive = true
 * #eligible-not-enrolled "Eligible, not yet enrolled"
 * #enrolled "Enrolled"
@@ -91,6 +99,7 @@ CodeSystem: SISRMEReasonForConsultation
 Id: sisrme-reason-for-consultation
 Title: "SIS-RME Reason for Consultation (APSS & PP)"
 Description: "Reason for the APSS & PP (adherence and psychosocial support) consultation (MISAU.C.DE67)."
+* ^experimental = true
 * ^caseSensitive = true
 * #routine-visit "Normal/routine visit"
 * #missed-appointment "Absent (missed appointment)"
@@ -100,6 +109,7 @@ CodeSystem: SISRMEDisclosureStatus
 Id: sisrme-disclosure-status
 Title: "SIS-RME Diagnostic Disclosure Status"
 Description: "Status of HIV diagnosis disclosure, primarily for pediatric/adolescent patients (MISAU.C.DE76)."
+* ^experimental = true
 * ^caseSensitive = true
 * #no-disclosure "No disclosure has occurred"
 * #partial-disclosure "Partial disclosure"
@@ -109,6 +119,7 @@ CodeSystem: SISRMEKeyPopulationGroup
 Id: sisrme-key-population-group
 Title: "SIS-RME Key Population Group"
 Description: "Key population group, per the standard PEPFAR/WHO key-population categories used in HIV programming (MISAU.C.DE88)."
+* ^experimental = true
 * ^caseSensitive = true
 * #sex-worker "Sex worker"
 * #men-who-have-sex-with-men "Men who have sex with men"
@@ -121,6 +132,7 @@ CodeSystem: SISRMEARVAdministrator
 Id: sisrme-arv-administrator
 Title: "SIS-RME ARV Administrator"
 Description: "Who administers the patient's antiretroviral medication doses (MISAU.C.DE101)."
+* ^experimental = true
 * ^caseSensitive = true
 * #self "Self-administered"
 * #caregiver "Caregiver"
@@ -130,6 +142,7 @@ CodeSystem: SISRMEAdherenceClassification
 Id: sisrme-adherence-classification
 Title: "SIS-RME ART Adherence Classification"
 Description: "Overall classification of ART adherence (MISAU.C.DE104)."
+* ^experimental = true
 * ^caseSensitive = true
 * #good "Good"
 * #fair "Fair"
@@ -139,6 +152,7 @@ CodeSystem: SISRMESupportGroupType
 Id: sisrme-support-group-type
 Title: "SIS-RME Support Group Type"
 Description: "Peer/community support group(s) a patient participates in (MISAU.C.DE113-119)."
+* ^experimental = true
 * ^caseSensitive = true
 * #mother-to-mother "Mother-to-Mother Support Group (MPM)"
 * #parents-caregivers "Parents and Caregivers Support Group"
@@ -152,6 +166,7 @@ CodeSystem: SISRMERegimenLine
 Id: sisrme-regimen-line
 Title: "SIS-RME ART Regimen Line"
 Description: "Which line of ART regimen a change/alternative applies to (MISAU.C, Alternative & Line Treatment section)."
+* ^experimental = true
 * ^caseSensitive = true
 * #first-line-alternative "1st Line Alternative"
 * #second-line "2nd Line"

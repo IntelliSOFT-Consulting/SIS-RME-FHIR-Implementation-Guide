@@ -88,7 +88,7 @@ publisher:
 menu:
   Home: index.html
   Modules Overview: modules-overview.html
-  Design Notes: design-notes.html
+  Design Notes: technical-design.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

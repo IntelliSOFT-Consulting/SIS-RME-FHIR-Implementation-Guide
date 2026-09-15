@@ -13,6 +13,7 @@ Parent: Condition
 Id: sisrme-tb-case
 Title: "SIS-RME TB Case"
 Description: "A patient's tuberculosis case, per SIS-RME Data Dictionary module F (TB Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)
@@ -61,12 +62,13 @@ Description: "A patient's tuberculosis case, per SIS-RME Data Dictionary module 
 ValueSet: SISRMETBConditionCodeVS
 Id: sisrme-tb-condition-code-vs
 Title: "SIS-RME TB Condition Code"
-Description: "Tuberculosis diagnosis codes, reusing the ICD-10 Tuberculosis chapter (A15-A19). A15 (respiratory TB, bacteriologically/histologically confirmed) is cited directly in the source data dictionary for MISAU.TB.DE.81 (Bacteriologically confirmed)."
-* include codes from system $ICD10 where concept is-a #A15
-* include codes from system $ICD10 where concept is-a #A16
-* include codes from system $ICD10 where concept is-a #A17
-* include codes from system $ICD10 where concept is-a #A18
-* include codes from system $ICD10 where concept is-a #A19
+Description: "Tuberculosis diagnosis codes, reusing the ICD-10 Tuberculosis chapter (A15-A19) 3-character category codes. A15 (respiratory TB, bacteriologically/histologically confirmed) is cited directly in the source data dictionary for MISAU.TB.DE.81 (Bacteriologically confirmed). Enumerated directly rather than via an is-a hierarchy filter, since ICD-10 subsumption/expansion support is not reliably available from public FHIR terminology servers (ICD-10 content is licensed by WHO); implementers needing full 4th/5th-character specificity should bind to a locally-loaded ICD-10 code system instead."
+* ^experimental = true
+* $ICD10#A15 "Respiratory tuberculosis, bacteriologically and histologically confirmed"
+* $ICD10#A16 "Respiratory tuberculosis, not confirmed bacteriologically or histologically"
+* $ICD10#A17 "Tuberculosis of nervous system"
+* $ICD10#A18 "Tuberculosis of other organs"
+* $ICD10#A19 "Miliary tuberculosis"
 
 Instance: TBCaseExample
 InstanceOf: SISRMETBCase
@@ -78,7 +80,7 @@ Usage: #example
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * code = $ICD10#A15.0 "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
 * onsetDateTime = "2026-05-20"
-* extension[presumptive].valueCodeableConcept = $v2-0136#N "No"
+* extension[presumptive].valueCodeableConcept = $v2-0532#N "No"
 * extension[tbType].valueCodeableConcept = SISRMETBType#sensitive "Sensitive"
 * extension[detailedState].valueCodeableConcept = SISRMETBCaseState#active "Active TB"
 * extension[provenance].valueCodeableConcept = SISRMETBProvenance#same-health-unit "Same Health Unit (internal detection)"

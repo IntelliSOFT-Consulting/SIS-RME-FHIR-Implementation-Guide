@@ -18,6 +18,7 @@ Parent: Encounter
 Id: sisrme-general-consultation
 Title: "SIS-RME General Consultation"
 Description: "A general outpatient/inpatient consultation, from initial assessment through discharge/transfer, per SIS-RME Data Dictionary module G (General Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)

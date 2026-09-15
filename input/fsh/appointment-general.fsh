@@ -11,6 +11,7 @@ Parent: Appointment
 Id: sisrme-appointment
 Title: "SIS-RME Appointment"
 Description: "A scheduled patient appointment/admission, per SIS-RME Data Dictionary module G (General Module, Schedule Appointment)."
+* ^experimental = true
 
 * status MS
 * serviceType 0..* MS
@@ -21,6 +22,8 @@ Description: "A scheduled patient appointment/admission, per SIS-RME Data Dictio
 * description ^short = "Reason for Admission (DE23), if not separately coded"
 * start 0..1 MS
 * start ^short = "Date of Consultation (DE17); Service Time (DE14)"
+* end 0..1 MS
+* end ^short = "End of the scheduled appointment slot; not separately captured in the source dictionary but required by the base Appointment resource whenever start is present"
 * created 0..1 MS
 * created ^short = "Registration Date (DE7)"
 * participant 1..* MS
@@ -57,6 +60,7 @@ Usage: #example
 * serviceType.text = "General Consultation"
 * specialty.text = "General Medicine"
 * start = "2026-06-15T08:00:00+02:00"
+* end = "2026-06-15T08:30:00+02:00"
 * created = "2026-06-14T16:30:00+02:00"
 * participant[0].actor = Reference(PatientRegistrationExample)
 * participant[0].status = #accepted

@@ -10,8 +10,11 @@ Parent: Observation
 Id: sisrme-mch-vital-sign
 Title: "SIS-RME MCH Vital Sign / Measurement"
 Description: "A single vital sign, anthropometric, obstetric or Glasgow Coma Scale measurement recorded during a Prenatal, Postnatal or Paediatric consultation."
+* ^experimental = true
 
 * status MS
+* category 0..* MS
+* category ^short = "vital-signs for true vital signs (required by the matching core FHIR vital-signs profiles for weight/height/BMI/temperature/heart rate/respiratory rate/blood pressure/SpO2); exam for other physical/obstetric measurements"
 * code 1..1 MS
 * code from SISRMEMCHVitalSignCodeVS (extensible)
 * subject 1..1 MS
@@ -27,6 +30,7 @@ ValueSet: SISRMEMCHVitalSignCodeVS
 Id: sisrme-mch-vital-sign-code-vs
 Title: "SIS-RME MCH Vital Sign / Measurement Code"
 Description: "Codes for SISRMEMCHVitalSign.code, reusing well-established LOINC codes for standard vital signs, anthropometrics, obstetric measurements and Glasgow Coma Scale components."
+* ^experimental = true
 * $LOINC#8480-6 "Systolic blood pressure"
 * $LOINC#8462-4 "Diastolic blood pressure"
 * $LOINC#8310-5 "Body temperature"
@@ -50,6 +54,7 @@ CodeSystem: SISRMEMCHVitalSignLocalCode
 Id: sisrme-mch-vital-sign-local-code
 Title: "SIS-RME MCH Vital Sign / Measurement (local codes)"
 Description: "Local codes for MCH measurements with no confirmed LOINC equivalent identified within this IG's terminology-verification process. See SISRMEMCHVitalSignCodeVS."
+* ^experimental = true
 * ^caseSensitive = true
 * #muac "Mid-upper arm circumference (MUAC)"
 * #length "Body length (recumbent, infant)"
@@ -57,10 +62,13 @@ Description: "Local codes for MCH measurements with no confirmed LOINC equivalen
 Instance: MCHVitalSignFundalHeightExample
 InstanceOf: SISRMEMCHVitalSign
 Title: "Example: Prenatal Fundal Height"
+Description: "An example fundal height measurement recorded during a prenatal consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam "Exam"
 * code = $LOINC#11881-0 "Uterus Fundal height Tape measure"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * effectiveDateTime = "2026-06-01T09:00:00+02:00"
 * valueQuantity.value = 28
 * valueQuantity.unit = "cm"
@@ -70,10 +78,13 @@ Usage: #example
 Instance: MCHVitalSignFetalHeartRateExample
 InstanceOf: SISRMEMCHVitalSign
 Title: "Example: Prenatal Fetal Heart Rate"
+Description: "An example fetal heart rate measurement recorded during a prenatal consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam "Exam"
 * code = $LOINC#55283-6 "Fetal Heart rate"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * effectiveDateTime = "2026-06-01T09:00:00+02:00"
 * valueQuantity.value = 142
 * valueQuantity.unit = "beats/minute"
@@ -83,10 +94,13 @@ Usage: #example
 Instance: MCHVitalSignGCSTotalExample
 InstanceOf: SISRMEMCHVitalSign
 Title: "Example: Paediatric GCS Total Score"
+Description: "An example Glasgow Coma Scale total score recorded during a paediatric consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam "Exam"
 * code = $LOINC#67847-4 "Glasgow coma score total"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * effectiveDateTime = "2026-06-20T10:00:00+02:00"
 * valueQuantity.value = 15
 * valueQuantity.unit = "score"

@@ -14,6 +14,7 @@ Parent: EpisodeOfCare
 Id: sisrme-program-enrollment
 Title: "SIS-RME Program Enrollment"
 Description: "A client's enrollment in a MISAU outpatient program/service, per SIS-RME Data Dictionary module B (General Outpatient Consultation)."
+* ^experimental = true
 
 * patient 1..1 MS
 * patient only Reference(SISRMEPatient)
@@ -61,10 +62,10 @@ Usage: #example
 * extension[transferOrigin].extension[province].valueCodeableConcept = SISRMEMozambiqueProvince#gaza "Gaza"
 * extension[transferOrigin].extension[district].valueCodeableConcept = SISRMEDistrictExample#kamubukwana "KaMubukwana"
 * extension[transferOrigin].extension[healthUnit].valueString = "Centro de Saúde de Chókwè"
-* extension[consentToContactTesting].extension[consentGiven].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[consentToContactTesting].extension[consentGiven].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[consentToContactTesting].extension[preferredTestingLocation].valueCodeableConcept = SISRMETestingLocation#health-unit "Health Unit"
 * extension[consentToContactTesting].extension[expectedTestingDate].valueDate = "2026-02-01"
-* extension[contactAgreement].extension[agreesToBeContacted].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[contactAgreement].extension[agreesToBeContacted].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[contactAgreement].extension[contactMethod][0].valueCodeableConcept = SISRMEContactMethod#telephone-call "Telephone Call"
 * extension[indexContact][0].extension[name].valueString = "Joaquim Machava"
 * extension[indexContact][0].extension[sex].valueCode = #male

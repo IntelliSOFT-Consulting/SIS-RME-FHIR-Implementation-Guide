@@ -7,6 +7,7 @@ Id: sisrme-estimated-age
 Title: "Estimated Age"
 Description: "An estimated age recorded at registration when an exact, confirmed date of birth is not available (MOZ.Registration.DE.5-9)."
 Context: Patient
+* ^experimental = true
 * value[x] only Age
 * valueAge.value 1..1 MS
 * valueAge.unit 1..1 MS
@@ -19,6 +20,7 @@ Id: sisrme-birth-registration-status
 Title: "Birth Registration Status"
 Description: "Whether the patient (if a child) was registered at the civil registry office (MOZ.Registration.DE.10-13)."
 Context: Patient
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEBirthRegistrationStatusVS (required)
 
@@ -27,6 +29,7 @@ Id: sisrme-race
 Title: "Race"
 Description: "Race as captured at patient registration (MOZ.Registration.DE.17-23)."
 Context: Patient
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMERaceVS (required)
 
@@ -35,6 +38,7 @@ Id: sisrme-fathers-name
 Title: "Father's Name"
 Description: "The name of the patient's father (MOZ.Registration.DE.33). There is no standard FHIR extension for this; compare the core patient-mothersMaidenName extension used for MOZ.Registration.DE.34."
 Context: Patient
+* ^experimental = true
 * value[x] only string
 * valueString 1..1 MS
 
@@ -43,6 +47,7 @@ Id: sisrme-occupation
 Title: "Occupation/Profession"
 Description: "The patient's occupation or profession (MOZ.Registration.DE.49, DE.137)."
 Context: Patient
+* ^experimental = true
 * value[x] only string
 * valueString 1..1 MS
 
@@ -51,6 +56,7 @@ Id: sisrme-contact-purpose
 Title: "Emergency Contact Purpose"
 Description: "The role(s) a registered contact plays for the patient: companion, emergency contact, carer and/or confidant (MOZ.Registration.DE.71-74)."
 Context: Patient.contact
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEContactPurposeVS (required)
 
@@ -59,6 +65,7 @@ Id: sisrme-contact-identifier
 Title: "Emergency Contact Identifier"
 Description: "A Mozambique national identifier (Old NID, NUIT or NUIC) for a registered contact (MOZ.Registration.DE.75-76)."
 Context: Patient.contact
+* ^experimental = true
 * extension contains
     type 1..1 MS and
     value 1..1 MS
@@ -71,6 +78,7 @@ Id: sisrme-donor-information
 Title: "Blood Donor Information"
 Description: "Blood donor registration information (MOZ.Registration.DE.78-95). The donor number itself (DE.77) is carried as a Patient.identifier slice; see SISRMEPatient."
 Context: Patient
+* ^experimental = true
 * extension contains
     bloodGroup 0..1 MS and
     rhesusFactor 0..1 MS and
@@ -100,6 +108,7 @@ Id: sisrme-socioeconomic-profile
 Title: "Socioeconomic Profile"
 Description: "Socioeconomic registration information (MOZ.Registration.DE.132-158)."
 Context: Patient
+* ^experimental = true
 * extension contains
     schoolLevel 0..1 MS and
     livingArrangement 0..1 MS and
@@ -124,6 +133,7 @@ Id: sisrme-family-relationship
 Title: "Registered Family Relationship"
 Description: "A family relationship registered for the patient, e.g. for mother/child linkage at birth (MOZ.Registration.DE.159-164)."
 Context: Patient
+* ^experimental = true
 * extension contains
     relationshipType 1..1 MS and
     newborn 0..1 MS
@@ -136,6 +146,7 @@ Id: sisrme-visit-status
 Title: "Visit Status"
 Description: "The patient's current status within an outpatient visit/queue (MOZ.Registration.DE.97-100)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEVisitStatusVS (required)
 
@@ -144,6 +155,7 @@ Id: sisrme-consultation-outcome
 Title: "Consultation Outcome"
 Description: "Outcome of the consultation/visit (MOZ.Registration.DE.128-131)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEConsultationOutcomeVS (required)
 
@@ -152,6 +164,7 @@ Id: sisrme-visit-notes
 Title: "Visit Notes"
 Description: "Free-text additional detail recorded about the visit (MOZ.Registration.DE.121)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEDiagnosesSummary
@@ -159,6 +172,7 @@ Id: sisrme-diagnoses-summary
 Title: "Diagnoses Summary"
 Description: "Free-text summary of diagnoses obtained during the visit (MOZ.Registration.DE.122)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEPrescriptionsSummary
@@ -166,6 +180,7 @@ Id: sisrme-prescriptions-summary
 Title: "Prescriptions Summary"
 Description: "Free-text summary of prescriptions issued during the visit (MOZ.Registration.DE.123)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMETestsSummary
@@ -173,6 +188,7 @@ Id: sisrme-tests-summary
 Title: "Tests Summary"
 Description: "Free-text summary of additional laboratory, rapid and imaging tests performed and their results (MOZ.Registration.DE.124)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEMedicalHistorySummary
@@ -180,6 +196,7 @@ Id: sisrme-medical-history-summary
 Title: "Medical History Summary"
 Description: "Free-text summary of the medical history recorded during the visit (MOZ.Registration.DE.125)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEObjectiveExamSummary
@@ -187,6 +204,7 @@ Id: sisrme-objective-exam-summary
 Title: "Objective Exam Summary"
 Description: "Free-text summary of the objective exam recorded during the visit (MOZ.Registration.DE.126)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMETreatmentsSummary
@@ -194,4 +212,5 @@ Id: sisrme-treatments-summary
 Title: "Treatments Performed Summary"
 Description: "Free-text summary of treatments performed during the visit (MOZ.Registration.DE.127)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string

@@ -11,8 +11,11 @@ Parent: Observation
 Id: sisrme-hiv-vital-sign
 Title: "SIS-RME HIV Consultation Vital Sign / Lab Measurement"
 Description: "A single vital sign, anthropometric, immunologic or virologic measurement recorded during an HIV consultation. One instance is created per measurement (e.g. one for Weight, one for CD4 count)."
+* ^experimental = true
 
 * status MS
+* category 0..* MS
+* category ^short = "vital-signs for true vital signs (weight/height/BMI/etc, required by the matching core FHIR vital-signs profiles); laboratory for CD4/viral load"
 * code 1..1 MS
 * code from SISRMEHIVVitalSignCodeVS (extensible)
 * subject 1..1 MS
@@ -28,6 +31,7 @@ ValueSet: SISRMEHIVVitalSignCodeVS
 Id: sisrme-hiv-vital-sign-code-vs
 Title: "SIS-RME HIV Consultation Vital Sign / Lab Measurement Code"
 Description: "Codes for SISRMEHIVVitalSign.code. Weight, Height, BMI and HIV viral load reuse well-established LOINC codes; CD4 absolute count reuses the LOINC code for the T4 helper (CD4+) cell count. CD4 percentage, CD4 semi-quantitative, MUAC, nutritional assessment, general state and level of consciousness are local codes: no single authoritative LOINC code could be confirmed for these within this IG's terminology-verification process, and implementers integrating with a specific lab system should map to that system's exact codes."
+* ^experimental = true
 * $LOINC#29463-7 "Body weight" // MISAU.C.DE46
 * $LOINC#8302-2 "Body height" // MISAU.C.DE47
 * $LOINC#39156-5 "Body mass index (BMI) [Ratio]" // MISAU.C.DE48
@@ -45,6 +49,7 @@ CodeSystem: SISRMEHIVVitalSignLocalCode
 Id: sisrme-hiv-vital-sign-local-code
 Title: "SIS-RME HIV Consultation Vital Sign / Lab Measurement (local codes)"
 Description: "Local codes for HIV consultation measurements with no confirmed LOINC equivalent (MISAU.C.DE16-17, DE20-21, DE49-52). See SISRMEHIVVitalSignCodeVS."
+* ^experimental = true
 * ^caseSensitive = true
 * #cd4-percentage "CD4 percentage"
 * #cd4-semi-quantitative "CD4, semi-quantitative"
@@ -57,10 +62,13 @@ Description: "Local codes for HIV consultation measurements with no confirmed LO
 Instance: HIVVitalSignWeightExample
 InstanceOf: SISRMEHIVVitalSign
 Title: "Example: HIV Consultation Weight"
+Description: "An example weight measurement recorded during an HIV consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $LOINC#29463-7 "Body weight"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * encounter = Reference(HIVConsultationExample)
 * effectiveDateTime = "2026-06-15T09:00:00+02:00"
 * valueQuantity.value = 58.4
@@ -71,10 +79,13 @@ Usage: #example
 Instance: HIVVitalSignCD4Example
 InstanceOf: SISRMEHIVVitalSign
 Title: "Example: HIV Consultation CD4 Count"
+Description: "An example CD4 absolute count laboratory result recorded during an HIV consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $LOINC#24467-3 "CD3+CD4+ (T4 helper) cells [#/volume] in Blood"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * encounter = Reference(HIVConsultationExample)
 * effectiveDateTime = "2026-06-10T08:00:00+02:00"
 * valueQuantity.value = 512
@@ -85,10 +96,13 @@ Usage: #example
 Instance: HIVVitalSignViralLoadExample
 InstanceOf: SISRMEHIVVitalSign
 Title: "Example: HIV Consultation Viral Load"
+Description: "An example HIV viral load laboratory result recorded during an HIV consultation."
 Usage: #example
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $LOINC#25836-8 "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
 * subject = Reference(PatientRegistrationExample)
+* performer[0].display = "Dr. Ines Sitoe"
 * encounter = Reference(HIVConsultationExample)
 * effectiveDateTime = "2026-06-01T08:00:00+02:00"
 * valueQuantity.value = 40

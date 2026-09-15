@@ -12,6 +12,7 @@ CodeSystem: SISRMEPrescriptionType
 Id: sisrme-prescription-type
 Title: "SIS-RME Prescription Type"
 Description: "Type of prescription being registered (MISAU.E.DE109-116)."
+* ^experimental = true
 * ^caseSensitive = true
 * #general "General"
 * #art "ART (Antiretroviral Therapy)" // not enumerated among MISAU.E.DE109-116's own options but given its own registration workflow (ART prescription) in the source dictionary
@@ -26,6 +27,7 @@ CodeSystem: SISRMEDietType
 Id: sisrme-diet-type
 Title: "SIS-RME Diet Type and Modifiers"
 Description: "Diet type and dietary modifiers for a dietary prescription (MISAU.E.DE161-184)."
+* ^experimental = true
 * ^caseSensitive = true
 * #normal "Normal"
 * #liquid "Liquid"
@@ -55,6 +57,7 @@ CodeSystem: SISRMEMedicationFrequency
 Id: sisrme-medication-frequency
 Title: "SIS-RME Medication Dosing Frequency"
 Description: "Dosing frequency for a prescribed medication (MISAU.E.DE158, DE234-241), consolidating the General and PrEP/TB/TPT prescription frequency tables (identical options, worded slightly differently)."
+* ^experimental = true
 * ^caseSensitive = true
 * #every-4-hours "Every 4 hours"
 * #every-6-hours "Every 6 hours"
@@ -68,6 +71,7 @@ CodeSystem: SISRMETherapeuticLine
 Id: sisrme-therapeutic-line
 Title: "SIS-RME Therapeutic Line"
 Description: "Line of therapy for an ART prescription (MISAU.E.DE198-202)."
+* ^experimental = true
 * ^caseSensitive = true
 * #first-line "First Line"
 * #first-alternative-line "First Alternative Line"
@@ -78,6 +82,7 @@ CodeSystem: SISRMELineChangeReason
 Id: sisrme-line-change-reason
 Title: "SIS-RME Reason for Therapeutic Line Change"
 Description: "Reason for changing a patient's therapeutic line (MISAU.E.DE218)."
+* ^experimental = true
 * ^caseSensitive = true
 * #therapeutic-failure "Therapeutic Failure"
 * #allergy "Allergy"
@@ -87,6 +92,7 @@ CodeSystem: SISRMEPatientTreatmentStatus
 Id: sisrme-patient-treatment-status
 Title: "SIS-RME Patient Treatment Status"
 Description: "Whether a prescription is for a patient's first or a subsequent consultation, or for treatment initiation or maintenance (MISAU.E.DE212-214, DE246-248)."
+* ^experimental = true
 * ^caseSensitive = true
 * #first-consultation "First consultation"
 * #subsequent-consultation "Subsequent consultation"

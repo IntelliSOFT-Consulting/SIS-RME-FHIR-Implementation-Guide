@@ -22,7 +22,7 @@ This first version of the IG covers seven areas of the SIS-RME data dictionary:
 - **Maternal and Child Health (MCH)** — prenatal, postnatal (including newborn) and paediatric consultations.
 - **General consultation** — the generic scheduling, examination, diagnosis, discharge and transfer workflow shared across services.
 
-See [Modules Overview](modules-overview.html) for a plain-language description of each area, and [Design Notes](design-notes.html) for the technical modeling approach, standards reused, and known limitations of this first version.
+See [Modules Overview](modules-overview.html) for a plain-language description of each area, and [Design Notes](technical-design.html) for the technical modeling approach, standards reused, and known limitations of this first version.
 
 ## Who this is for
 
@@ -31,4 +31,4 @@ See [Modules Overview](modules-overview.html) for a plain-language description o
 
 ## Status
 
-This IG is at an early, pre-publication stage (see [Design Notes](design-notes.html) for details): it has not yet been reviewed or approved by MISAU, and its canonical URL and publisher contact details are placeholders pending confirmation by the implementing organization. It should be treated as a working draft for review and testing, not as an officially endorsed national standard.
+This IG is at an early, pre-publication stage (see [Design Notes](technical-design.html) for details): it has not yet been reviewed or approved by MISAU, and its canonical URL and publisher contact details are placeholders pending confirmation by the implementing organization. It should be treated as a working draft for review and testing, not as an officially endorsed national standard.

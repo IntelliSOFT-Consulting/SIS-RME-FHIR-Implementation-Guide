@@ -2,90 +2,105 @@
 
 ValueSet: SISRMEHIVTestTypeVS
 Id: sisrme-hiv-test-type-vs
-Title: "SIS-RME HIV Test Type"
+Title: "SIS-RME HIV Test Type Value Set"
 Description: "Value set for MISAU.C.DE2."
+* ^experimental = true
 * include codes from system SISRMEHIVTestType
 
 ValueSet: SISRMEPCRResultVS
 Id: sisrme-pcr-result-vs
-Title: "SIS-RME PCR Result"
+Title: "SIS-RME PCR Result Value Set"
 Description: "Value set for MISAU.C.DE6, DE8."
+* ^experimental = true
 * include codes from system SISRMEPCRResult
 
 ValueSet: SISRMEDefinitiveDiagnosticCriteriaVS
 Id: sisrme-definitive-diagnostic-criteria-vs
-Title: "SIS-RME Definitive HIV Diagnostic Criteria"
+Title: "SIS-RME Definitive HIV Diagnostic Criteria Value Set"
 Description: "Value set for MISAU.C.DE10."
+* ^experimental = true
 * include codes from system SISRMEDefinitiveDiagnosticCriteria
 
 ValueSet: SISRMETPTRegimenVS
 Id: sisrme-tpt-regimen-vs
 Title: "SIS-RME TPT Regimen"
 Description: "Value set for MISAU.C.DE23."
+* ^experimental = true
 * include codes from system SISRMETPTRegimen
 
 ValueSet: SISRMEWHOClinicalStageVS
 Id: sisrme-who-clinical-stage-vs
-Title: "SIS-RME WHO HIV Clinical Stage"
+Title: "SIS-RME WHO HIV Clinical Stage Value Set"
 Description: "Value set for MISAU.C.DE18, DE56."
+* ^experimental = true
 * include codes from system SISRMEWHOClinicalStage
 
 ValueSet: SISRMEScreeningResultVS
 Id: sisrme-screening-result-vs
-Title: "SIS-RME Screening Result"
+Title: "SIS-RME Screening Result Value Set"
 Description: "Value set for MISAU.C.DE36-40."
+* ^experimental = true
 * include codes from system SISRMEScreeningResult
 
 ValueSet: SISRMEFamilyPlanningMethodVS
 Id: sisrme-family-planning-method-vs
-Title: "SIS-RME Family Planning Method"
+Title: "SIS-RME Family Planning Method Value Set"
 Description: "Value set for MISAU.C.DE43-44."
+* ^experimental = true
 * include codes from system SISRMEFamilyPlanningMethod
 
 ValueSet: SISRMEDSDStateVS
 Id: sisrme-dsd-state-vs
 Title: "SIS-RME Differentiated Service Delivery State"
 Description: "Value set for MISAU.C.DE60."
+* ^experimental = true
 * include codes from system SISRMEDSDState
 
 ValueSet: SISRMEReasonForConsultationVS
 Id: sisrme-reason-for-consultation-vs
-Title: "SIS-RME Reason for Consultation (APSS & PP)"
+Title: "SIS-RME Reason for Consultation (APSS & PP) Value Set"
 Description: "Value set for MISAU.C.DE67."
+* ^experimental = true
 * include codes from system SISRMEReasonForConsultation
 
 ValueSet: SISRMEDisclosureStatusVS
 Id: sisrme-disclosure-status-vs
-Title: "SIS-RME Diagnostic Disclosure Status"
+Title: "SIS-RME Diagnostic Disclosure Status Value Set"
 Description: "Value set for MISAU.C.DE76."
+* ^experimental = true
 * include codes from system SISRMEDisclosureStatus
 
 ValueSet: SISRMEKeyPopulationGroupVS
 Id: sisrme-key-population-group-vs
-Title: "SIS-RME Key Population Group"
+Title: "SIS-RME Key Population Group Value Set"
 Description: "Value set for MISAU.C.DE88."
+* ^experimental = true
 * include codes from system SISRMEKeyPopulationGroup
 
 ValueSet: SISRMEARVAdministratorVS
 Id: sisrme-arv-administrator-vs
-Title: "SIS-RME ARV Administrator"
+Title: "SIS-RME ARV Administrator Value Set"
 Description: "Value set for MISAU.C.DE101."
+* ^experimental = true
 * include codes from system SISRMEARVAdministrator
 
 ValueSet: SISRMEAdherenceClassificationVS
 Id: sisrme-adherence-classification-vs
-Title: "SIS-RME ART Adherence Classification"
+Title: "SIS-RME ART Adherence Classification Value Set"
 Description: "Value set for MISAU.C.DE104."
+* ^experimental = true
 * include codes from system SISRMEAdherenceClassification
 
 ValueSet: SISRMESupportGroupTypeVS
 Id: sisrme-support-group-type-vs
-Title: "SIS-RME Support Group Type"
+Title: "SIS-RME Support Group Type Value Set"
 Description: "Value set for MISAU.C.DE113-119."
+* ^experimental = true
 * include codes from system SISRMESupportGroupType
 
 ValueSet: SISRMERegimenLineVS
 Id: sisrme-regimen-line-vs
-Title: "SIS-RME ART Regimen Line"
+Title: "SIS-RME ART Regimen Line Value Set"
 Description: "Value set for MISAU.C Alternative & Line Treatment section."
+* ^experimental = true
 * include codes from system SISRMERegimenLine

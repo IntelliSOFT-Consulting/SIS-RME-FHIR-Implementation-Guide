@@ -18,6 +18,7 @@ Parent: Patient
 Id: sisrme-patient
 Title: "SIS-RME Patient"
 Description: "A patient registered in the SIS-RME system, per MISAU SIS-RME Data Dictionary module A (Registration)."
+* ^experimental = true
 
 // --- Core demographics (DE.1-34) ---
 
@@ -172,7 +173,7 @@ Usage: #example
 * extension[donorInformation].extension[bloodGroup].valueCodeableConcept = $SCT#112144000 "Blood group A"
 * extension[donorInformation].extension[rhesusFactor].valueCodeableConcept = $SCT#165747007 "RhD positive"
 * extension[donorInformation].extension[donationType].valueCodeableConcept = SISRMEDonationType#voluntary "Voluntary donor"
-* extension[donorInformation].extension[previousDonations].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[donorInformation].extension[previousDonations].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[donorInformation].extension[numberOfDonations].valueInteger = 3
 * extension[donorInformation].extension[locationOfPreviousDonation].valueString = "Centro de Saúde de Chókwè"
 * extension[donorInformation].extension[dateOfLastDonation].valueDate = "2025-11-02"
@@ -181,7 +182,7 @@ Usage: #example
 * extension[socioeconomicProfile].extension[livingArrangement].valueCodeableConcept = SISRMELivingArrangement#lives-with-household "Lives in a household/family unit"
 * extension[socioeconomicProfile].extension[employmentStatus].valueCodeableConcept = SISRMEEmploymentStatus#informal-employment "Informal employment"
 * extension[socioeconomicProfile].extension[householdSize].valueInteger = 4
-* extension[socioeconomicProfile].extension[hasIncomeSource].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[socioeconomicProfile].extension[hasIncomeSource].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[socioeconomicProfile].extension[registrationCategory][0].valueCodeableConcept = SISRMERegistrationCategory#blood-donor "Blood Donor"
 * extension[familyRelationship][0].extension[relationshipType].valueCodeableConcept = $v3-RoleCode#CHILD "child"
 * extension[familyRelationship][0].extension[newborn].valueBoolean = false

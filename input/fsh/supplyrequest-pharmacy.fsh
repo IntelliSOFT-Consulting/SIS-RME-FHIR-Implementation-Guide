@@ -29,6 +29,7 @@ Parent: SupplyRequest
 Id: sisrme-pharmacy-resupply-request
 Title: "SIS-RME Pharmacy Resupply Request"
 Description: "A health facility's periodic request to resupply its pharmacy stock of a medication, per SIS-RME Data Dictionary module E (Pharmacy Module, Medication Request)."
+* ^experimental = true
 
 * identifier 0..1 MS
 * identifier ^short = "Request Code (DE1)"
@@ -52,6 +53,7 @@ Id: sisrme-pharmacy-request-type
 Title: "Pharmacy Resupply Request Type"
 Description: "The periodicity of a pharmacy resupply request (MISAU.E.DE2-6)."
 Context: SupplyRequest
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPharmacyRequestTypeVS (required)
 
@@ -59,6 +61,7 @@ CodeSystem: SISRMEPharmacyRequestTypeCodes
 Id: sisrme-pharmacy-request-type
 Title: "SIS-RME Pharmacy Resupply Request Type"
 Description: "Value set members for MISAU.E.DE2-6."
+* ^experimental = true
 * ^caseSensitive = true
 * #weekly "Weekly"
 * #bi-weekly "Bi-weekly"
@@ -67,8 +70,9 @@ Description: "Value set members for MISAU.E.DE2-6."
 
 ValueSet: SISRMEPharmacyRequestTypeVS
 Id: sisrme-pharmacy-request-type-vs
-Title: "SIS-RME Pharmacy Resupply Request Type"
+Title: "SIS-RME Pharmacy Resupply Request Type Value Set"
 Description: "Value set for MISAU.E.DE2-6."
+* ^experimental = true
 * include codes from system SISRMEPharmacyRequestTypeCodes
 
 Instance: PharmacyResupplyRequestExample

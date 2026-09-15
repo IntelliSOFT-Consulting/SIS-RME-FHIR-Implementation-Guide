@@ -20,6 +20,7 @@ Parent: Encounter
 Id: sisrme-pediatric-consultation
 Title: "SIS-RME Paediatric Consultation"
 Description: "A paediatric consultation visit, per SIS-RME Data Dictionary module D (MCH Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)

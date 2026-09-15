@@ -15,6 +15,7 @@ Parent: Encounter
 Id: sisrme-hiv-consultation
 Title: "SIS-RME HIV Consultation"
 Description: "An HIV/ART consultation visit, per SIS-RME Data Dictionary module C (HIV Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)
@@ -87,20 +88,20 @@ Usage: #example
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 * reasonCode.text = "Routine ART follow-up"
-* extension[artHistory].extension[priorARVUse].valueCodeableConcept = $v2-0136#Y "Yes"
-* extension[artHistory].extension[everAttendedARTClinic].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[artHistory].extension[priorARVUse].valueCodeableConcept = $v2-0532#Y "Yes"
+* extension[artHistory].extension[everAttendedARTClinic].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[artInitiation].extension[artStartDate].valueDate = "2023-04-02"
 * extension[artInitiation].extension[initialRegimen].valueString = "TDF/3TC/DTG"
 * extension[artInitiation].extension[whoStageAtInitiation].valueCodeableConcept = SISRMEWHOClinicalStage#stage-1 "WHO Clinical Stage 1"
-* extension[artInitiation].extension[pregnantAtStart].valueCodeableConcept = $v2-0136#N "No"
-* extension[artInitiation].extension[breastfeedingAtStart].valueCodeableConcept = $v2-0136#N "No"
+* extension[artInitiation].extension[pregnantAtStart].valueCodeableConcept = $v2-0532#N "No"
+* extension[artInitiation].extension[breastfeedingAtStart].valueCodeableConcept = $v2-0532#N "No"
 * extension[screeningPanel].extension[sti].valueCodeableConcept = SISRMEScreeningResult#negative "Negative/Not suspected"
 * extension[screeningPanel].extension[tb].valueCodeableConcept = SISRMEScreeningResult#negative "Negative/Not suspected"
 * extension[screeningPanel].extension[hypertension].valueCodeableConcept = SISRMEScreeningResult#not-done "Not done"
 * extension[diagnosesSummary].valueString = "HIV infection, on ART, virally suppressed"
 * extension[whoStageCurrent].valueCodeableConcept = SISRMEWHOClinicalStage#stage-1 "WHO Clinical Stage 1"
 * extension[adherenceToART].valueCodeableConcept = SISRMEAdherenceClassification#good "Good"
-* extension[differentiatedServiceDelivery].extension[eligible].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[differentiatedServiceDelivery].extension[eligible].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[differentiatedServiceDelivery].extension[state].valueCodeableConcept = SISRMEDSDState#enrolled "Enrolled"
 * extension[adherenceSupport].extension[administrator].valueCodeableConcept = SISRMEARVAdministrator#self "Self-administered"
 * extension[adherenceSupport].extension[dosesForgottenLast2Weeks].valueInteger = 0

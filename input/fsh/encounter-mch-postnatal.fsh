@@ -12,6 +12,7 @@ Parent: Encounter
 Id: sisrme-postnatal-consultation
 Title: "SIS-RME Postnatal Consultation"
 Description: "A postnatal (postpartum) consultation visit for mother and newborn, per SIS-RME Data Dictionary module D (MCH Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)

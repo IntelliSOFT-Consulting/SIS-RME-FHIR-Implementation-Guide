@@ -14,6 +14,7 @@ Parent: Encounter
 Id: sisrme-tb-consultation
 Title: "SIS-RME TB Consultation"
 Description: "A TB consultation visit (initial or follow-up), per SIS-RME Data Dictionary module F (TB Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)
@@ -61,8 +62,8 @@ Usage: #example
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 * reasonCode.text = "Cough lasting more than 2 weeks"
 * extension[consultationType].valueCodeableConcept = SISRMETBConsultationType#initial "Initial Consultation"
-* extension[diseaseScreening].extension[exposedToTBLast2Years].valueCodeableConcept = $v2-0136#Y "Yes"
-* extension[diseaseScreening].extension[hasSymptoms].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[diseaseScreening].extension[exposedToTBLast2Years].valueCodeableConcept = $v2-0532#Y "Yes"
+* extension[diseaseScreening].extension[hasSymptoms].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[diseaseScreening].extension[symptom][0].valueCodeableConcept = SISRMETBSymptom#cough-2-weeks "Cough lasting more than 2 weeks"
 * extension[diseaseScreening].extension[symptom][1].valueCodeableConcept = SISRMETBSymptom#night-sweats "Night Sweats"
 * extension[diseaseScreening].extension[symptom][2].valueCodeableConcept = SISRMETBSymptom#weight-loss "Weight loss"
@@ -73,6 +74,6 @@ Usage: #example
 * extension[labAndImagingResultSummary].extension[xpert].valueString = "MTB detected, rifampicin resistance not detected"
 * extension[adherenceRiskFactor][0].valueCodeableConcept = SISRMETBAdherenceRiskFactor#lives-far-from-facility "Lives far from health facility"
 * extension[mentalHealthAssessment].extension[screeningResult].valueCodeableConcept = SISRMETBMentalHealthScreening#no-mental-illness "No Mental Illness"
-* extension[mentalHealthAssessment].extension[suicideRisk].valueCodeableConcept = $v2-0136#N "No"
-* extension[mentalHealthAssessment].extension[adherenceCounselingProvided].valueCodeableConcept = $v2-0136#Y "Yes"
+* extension[mentalHealthAssessment].extension[suicideRisk].valueCodeableConcept = $v2-0532#N "No"
+* extension[mentalHealthAssessment].extension[adherenceCounselingProvided].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[socialSupport][0].valueCodeableConcept = SISRMETBSocialSupport#food-basket "Food Basket"

@@ -14,6 +14,7 @@ Parent: MedicationRequest
 Id: sisrme-medication-request
 Title: "SIS-RME Medication Request"
 Description: "A medication, dietary or therapeutic prescription, per SIS-RME Data Dictionary module E (Pharmacy Module)."
+* ^experimental = true
 
 * identifier 0..1 MS
 * identifier ^short = "Prescription Number (DE105)"
@@ -85,12 +86,14 @@ ValueSet: SISRMEMedicationCodeVS
 Id: sisrme-medication-code-vs
 Title: "SIS-RME Medication Code (example)"
 Description: "Example, non-exhaustive value set for SISRMEMedicationRequest.medicationCodeableConcept. The source data dictionary specifies these as a single-selection list against the national essential medicines list (Formulário Nacional de Medicamentos, FNM); implementers should bind to a complete FNM-derived code system rather than this illustrative example set."
+* ^experimental = true
 * include codes from system SISRMEMedicationCodeExample
 
 CodeSystem: SISRMEMedicationCodeExample
 Id: sisrme-medication-code-example
 Title: "SIS-RME Medication Code (example codes)"
 Description: "A small, illustrative sample of medications, keyed loosely on FNM-style codes. See SISRMEMedicationCodeVS."
+* ^experimental = true
 * ^caseSensitive = true
 * #paracetamol-500mg "Paracetamol 500mg"
 * #amoxicillin-500mg "Amoxicillin 500mg"
@@ -120,5 +123,5 @@ Usage: #example
 * extension[therapeuticRegimen].valueString = "TDF/3TC/DTG"
 * extension[therapeuticLine].valueCodeableConcept = SISRMETherapeuticLine#first-line "First Line"
 * extension[patientTreatmentStatus].valueCodeableConcept = SISRMEPatientTreatmentStatus#maintenance "Maintenance"
-* extension[lineChange].extension[changed].valueCodeableConcept = $v2-0136#N "No"
+* extension[lineChange].extension[changed].valueCodeableConcept = $v2-0532#N "No"
 * extension[nextRefillDate].valueDate = "2026-07-15"

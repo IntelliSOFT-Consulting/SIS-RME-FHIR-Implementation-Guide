@@ -9,6 +9,7 @@ Parent: Encounter
 Id: sisrme-visit-summary
 Title: "SIS-RME Visit Summary"
 Description: "A summary of an outpatient visit/consultation as captured by the SIS-RME registration workflow."
+* ^experimental = true
 
 * status MS
 * class MS

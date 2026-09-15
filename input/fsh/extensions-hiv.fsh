@@ -12,6 +12,7 @@ Id: sisrme-hiv-testing
 Title: "HIV Testing and Diagnosis"
 Description: "HIV testing and diagnosis details (MISAU.C.DE2-DE10)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     testType 0..1 MS and
     positiveTestDate 0..1 MS and
@@ -47,6 +48,7 @@ Id: sisrme-art-history
 Title: "Prior ART History"
 Description: "Whether and what ARVs the patient has taken previously, and prior ART clinic attendance (MISAU.C.DE12-14)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     priorARVUse 0..1 MS and
     priorARVTypes 0..1 MS and
@@ -64,6 +66,7 @@ Id: sisrme-tpt-prophylaxis
 Title: "TPT Prophylaxis"
 Description: "TB preventive therapy regimen and dates (MISAU.C.DE23-25)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     regimen 0..1 MS and
     startDate 0..1 MS and
@@ -78,6 +81,7 @@ Id: sisrme-art-initiation
 Title: "ART Initiation"
 Description: "Details of HIV-care and ART enrollment and initiation (MISAU.C.DE26-DE37)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     hivCareStartDate 0..1 MS and
     hivCareHomeFacility 0..1 MS and
@@ -113,6 +117,7 @@ Id: sisrme-regimen-change
 Title: "ART Regimen Change"
 Description: "A change to an alternative or subsequent line of ART regimen (MISAU.C, Alternative & Line Treatment section, consolidating the 1st Line Alternative, 2nd Line and 3rd Line Regimen change tables into one repeating structure)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     line 1..1 MS and
     regimen 0..1 MS and
@@ -129,6 +134,7 @@ Id: sisrme-screening-panel
 Title: "Screening Panel"
 Description: "Results of routine clinical screenings performed during an HIV consultation (MISAU.C.DE36-40)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     sti 0..1 MS and
     cervicalCancer 0..1 MS and
@@ -154,6 +160,7 @@ Id: sisrme-family-planning-status
 Title: "Family Planning Status"
 Description: "Family planning method in current use (MISAU.C.DE43-44)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     method 0..1 MS and
     otherSpecify 0..1 MS
@@ -166,6 +173,7 @@ Id: sisrme-hiv-allergy-summary
 Title: "Allergy Registry Summary"
 Description: "Free-text summary of the allergy registry reviewed during the consultation (MISAU.C.DE35). See the core FHIR AllergyIntolerance resource for structured allergy recording in a future iteration."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEMenstrualHistorySummary
@@ -173,6 +181,7 @@ Id: sisrme-menstrual-history-summary
 Title: "Menstrual History Summary"
 Description: "Free-text summary of menstrual history (MISAU.C.DE42)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEChronicConditionsSummary
@@ -180,6 +189,7 @@ Id: sisrme-chronic-conditions-summary
 Title: "Medical Conditions / Chronic Diseases Summary"
 Description: "Free-text summary of medical conditions/chronic diseases (MISAU.C.DE41)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEWHOStageCurrent
@@ -187,6 +197,7 @@ Id: sisrme-who-stage-current
 Title: "Current WHO HIV Clinical Stage"
 Description: "WHO clinical stage as assessed at the current visit (MISAU.C.DE56)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEWHOClinicalStageVS (required)
 
@@ -195,6 +206,7 @@ Id: sisrme-adherence-to-art
 Title: "Adherence to ART (clinical impression)"
 Description: "Clinician's overall impression of the patient's ART adherence at this visit (MISAU.C.DE57)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEAdherenceClassificationVS (extensible)
 
@@ -203,6 +215,7 @@ Id: sisrme-side-effects-summary
 Title: "ART Side Effects Summary"
 Description: "Free-text summary of reported ART side effects (MISAU.C.DE58)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEDifferentiatedServiceDelivery
@@ -210,6 +223,7 @@ Id: sisrme-differentiated-service-delivery
 Title: "Differentiated Service Delivery (MDS)"
 Description: "Eligibility for, and enrollment state in, a differentiated ART service delivery model (MISAU.C.DE59-61)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     eligible 0..1 MS and
     state 0..1 MS and
@@ -227,6 +241,7 @@ Id: sisrme-advanced-hiv-disease
 Title: "Advanced HIV Disease (Kaposi's Sarcoma Chemotherapy)"
 Description: "Chemotherapy details for Kaposi's sarcoma in the context of advanced HIV disease (MISAU.C.DE62-67)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     chemotherapyIndicated 0..1 MS and
     cycleNumber 0..1 MS and
@@ -247,6 +262,7 @@ Id: sisrme-adherence-counseling
 Title: "Adherence and Psychosocial Counseling (APSS core)"
 Description: "Core adherence-preparation and psychosocial counseling assessment (MISAU.C.DE67-DE74)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     reasonForConsultation 0..1 MS and
     acceptanceOfDiagnosis 0..1 MS and
@@ -273,6 +289,7 @@ Id: sisrme-disclosure-assessment
 Title: "Diagnostic Disclosure Assessment"
 Description: "Assessment and planning around HIV diagnostic disclosure, primarily for pediatric/adolescent patients (MISAU.C.DE75-DE87)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     caregiverConsent 0..1 MS and
     disclosureStatus 0..1 MS and
@@ -310,6 +327,7 @@ Id: sisrme-key-population
 Title: "Key Population"
 Description: "Key population group membership and related prevention services (MISAU.C.DE88-90)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     group 0..1 MS and
     state 0..1 MS and
@@ -324,6 +342,7 @@ Id: sisrme-prevention-package
 Title: "Prevention with Positives (PP) Package"
 Description: "Completion of the 7-topic Prevention with Positives counseling package (MISAU.C.DE91-97)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     sexualBehaviourAndSafeSex 0..1 MS and
     serostatusDisclosureToPartner 0..1 MS and
@@ -352,6 +371,7 @@ Id: sisrme-serostatus-disclosure
 Title: "Serostatus Disclosure to Others"
 Description: "Whether the patient has disclosed their HIV status to others, and follow-up contact testing (MISAU.C.DE98-100)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     disclosedToAnyone 0..1 MS and
     kinshipOfPersonDisclosedTo 0..1 MS and
@@ -367,6 +387,7 @@ Id: sisrme-adherence-support
 Title: "ARV Adherence Support"
 Description: "Details of who supports ARV administration and an assessment of adherence (MISAU.C.DE101-DE112)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     administrator 0..1 MS and
     administratorKinship 0..1 MS and
@@ -406,6 +427,7 @@ Id: sisrme-support-group-participation
 Title: "Support Group Participation"
 Description: "Peer/community support group(s) the patient participates in (MISAU.C.DE113-119)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     groupType 0..1 MS and
     otherSpecify 0..1 MS
@@ -418,6 +440,7 @@ Id: sisrme-treatment-failure-review
 Title: "Treatment Failure Review"
 Description: "Review of suspected therapeutic failure and any resulting therapeutic committee decision (MISAU.C.DE119-DE124)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     suspectedFailure 0..1 MS and
     committeeSubmissionId 0..1 MS and

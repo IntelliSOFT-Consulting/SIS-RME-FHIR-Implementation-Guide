@@ -14,6 +14,7 @@ Id: sisrme-tb-presumptive
 Title: "Presumptive TB Case"
 Description: "Whether this is a presumptive (not yet confirmed) TB case (MISAU.TB.DE.27)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from $v2-0136-vs (required)
 
@@ -22,6 +23,7 @@ Id: sisrme-tb-type-ext
 Title: "Type of TB"
 Description: "Drug sensitivity classification of the TB case (MISAU.TB.DE.30, DE.54-56)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBTypeVS (required)
 
@@ -30,6 +32,7 @@ Id: sisrme-tb-detailed-state
 Title: "TB Case Detailed State/Outcome"
 Description: "The detailed TB case lifecycle state or treatment outcome (MISAU.TB.DE.33-41, DE.188-195), in addition to the coarse-grained core Condition.clinicalStatus."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBCaseStateVS (required)
 
@@ -38,6 +41,7 @@ Id: sisrme-tb-provenance-ref
 Title: "TB Case Provenance"
 Description: "Origin from which the TB case was detected or referred (MISAU.TB.DE.50-53), reusing the provenance value set defined for MISAU.B."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBProvenanceVS (extensible)
 
@@ -46,6 +50,7 @@ Id: sisrme-tb-risk-group-membership
 Title: "TB Risk Group Membership"
 Description: "Occupational/social risk group(s) the patient belongs to (MISAU.TB.DE.59-68)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBRiskGroupVS (required)
 
@@ -54,6 +59,7 @@ Id: sisrme-tb-risk-group-other
 Title: "TB Risk Group, Other (specify)"
 Description: "Free text for an 'Other' TB risk group (MISAU.TB.DE.68)."
 Context: Condition
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMETBRiskFactorPresent
@@ -61,6 +67,7 @@ Id: sisrme-tb-risk-factor-present
 Title: "TB Risk Factor Present"
 Description: "Clinical/behavioral risk factor(s) present (MISAU.TB.DE.69-75)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBRiskFactorVS (required)
 
@@ -69,6 +76,7 @@ Id: sisrme-tb-risk-factor-other
 Title: "TB Risk Factor, Other (specify)"
 Description: "Free text for an 'Other' TB risk factor (MISAU.TB.DE.75)."
 Context: Condition
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMETBDiseaseLocation
@@ -76,6 +84,7 @@ Id: sisrme-tb-disease-location
 Title: "TB Disease Location"
 Description: "Anatomical categorization of the TB case (MISAU.TB.DE.76-80)."
 Context: Condition
+* ^experimental = true
 * extension contains
     category 0..1 MS and
     extrapulmonarySite 0..1 MS
@@ -89,6 +98,7 @@ Id: sisrme-tb-bacteriological-status-ext
 Title: "TB Diagnostic Basis"
 Description: "Whether the TB case was bacteriologically confirmed or clinically diagnosed (MISAU.TB.DE.81-82)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBBacteriologicalStatusVS (required)
 
@@ -97,6 +107,7 @@ Id: sisrme-tb-prior-treatment-category-ext
 Title: "TB Prior Treatment Category"
 Description: "Registration category describing the patient's TB treatment history (MISAU.TB.DE.83-89)."
 Context: Condition
+* ^experimental = true
 * extension contains
     category 0..1 MS and
     otherSpecify 0..1 MS
@@ -109,6 +120,7 @@ Id: sisrme-tb-previous-treatment-episode
 Title: "Previous TB Treatment Episode"
 Description: "A previous course of TB treatment (MISAU.TB.DE.90-97)."
 Context: Condition
+* ^experimental = true
 * extension contains
     startDate 0..1 MS and
     endDate 0..1 MS and
@@ -127,6 +139,7 @@ Id: sisrme-tb-comorbidity-record
 Title: "TB Comorbidity"
 Description: "A comorbid condition recorded alongside the TB case (MISAU.TB.DE.98-109)."
 Context: Condition
+* ^experimental = true
 * extension contains
     pathology 0..1 MS and
     otherSpecify 0..1 MS and
@@ -143,6 +156,7 @@ Id: sisrme-tb-contact-tracing-summary
 Title: "TB Contact Tracing Summary"
 Description: "Aggregate counts from contact/family member tracing for this TB index case (MISAU.TB.DE.16-23)."
 Context: Condition
+* ^experimental = true
 * extension contains
     contactsUnder5 0..1 MS and
     contacts5to14 0..1 MS and
@@ -165,6 +179,7 @@ Id: sisrme-tb-treatment-regimen
 Title: "TB Treatment Regimen (current)"
 Description: "The current TB treatment regimen, duration and start date (MISAU.TB.DE.57-58, registration for the TB service)."
 Context: Condition
+* ^experimental = true
 * extension contains
     regimen 0..1 MS and
     durationMonths 0..1 MS and
@@ -179,6 +194,7 @@ Id: sisrme-tb-medication-intake
 Title: "TB Medication Intake Log Entry"
 Description: "A single entry in the directly-observed TB medication intake monitoring log (MISAU.TB.DE.42-49)."
 Context: Condition
+* ^experimental = true
 * extension contains
     monitoringLocation 0..1 MS and
     dateTaken 1..1 MS
@@ -193,6 +209,7 @@ Id: sisrme-tb-consultation-type-ext
 Title: "TB Consultation Type"
 Description: "Type of TB consultation (MISAU.TB.DE.1-3)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBConsultationTypeVS (required)
 
@@ -201,6 +218,7 @@ Id: sisrme-tb-disease-screening
 Title: "TB Disease Screening"
 Description: "TB exposure and symptom screening performed at this visit (MISAU.TB.DE.4-15)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     exposedToTBLast2Years 0..1 MS and
     hasSymptoms 0..1 MS and
@@ -219,6 +237,7 @@ Id: sisrme-psychomotor-development
 Title: "Psychomotor Development"
 Description: "Free-text note on psychomotor development, for pediatric patients (MISAU.TB.DE.112)."
 Context: Encounter
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEMenstrualAndPregnancyHistory
@@ -226,6 +245,7 @@ Id: sisrme-menstrual-and-pregnancy-history
 Title: "Menstrual and Pregnancy/Lactation History"
 Description: "Menstrual, pregnancy and lactation history (MISAU.TB.DE.113-122)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     menarcheAge 0..1 MS and
     menopause 0..1 MS and
@@ -253,6 +273,7 @@ Id: sisrme-tb-physical-exam-findings
 Title: "TB Physical Examination Findings"
 Description: "Physical examination findings by body system, recorded during a TB consultation (MISAU.TB.DE.123-126)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     mucousMembranes 0..1 MS and
     respiratory 0..1 MS and
@@ -268,6 +289,7 @@ Id: sisrme-tb-lab-test-request
 Title: "TB Laboratory Test Request"
 Description: "A laboratory test requested during a TB consultation (MISAU.TB.DE.127-132)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     priority 0..1 MS and
     testName 0..1 MS and
@@ -285,6 +307,7 @@ Id: sisrme-tb-lab-and-imaging-result-summary
 Title: "TB Laboratory and Imaging Result Summary"
 Description: "Free-text summary of TB bacteriology and imaging results (MISAU.TB.DE.133-150)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     microscopy 0..1 MS and
     xpert 0..1 MS and
@@ -310,6 +333,7 @@ Id: sisrme-tb-adherence-risk-factor-present
 Title: "TB Adherence Risk Factor Present"
 Description: "Factor(s) that may affect adherence to TB treatment, identified during counseling (MISAU.TB.DE.151-167)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBAdherenceRiskFactorVS (required)
 
@@ -318,6 +342,7 @@ Id: sisrme-tb-mental-health-assessment
 Title: "TB Mental Health Assessment"
 Description: "Mental health screening, suicide risk and intervention during TB counseling (MISAU.TB.DE.168-178)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     screeningResult 0..1 MS and
     suicideRisk 0..1 MS and
@@ -338,6 +363,7 @@ Id: sisrme-tb-social-support-provided
 Title: "TB Social Support Provided"
 Description: "Social support provided to the patient (MISAU.TB.DE.179-181)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBSocialSupportVS (required)
 
@@ -346,6 +372,7 @@ Id: sisrme-tb-treatment-interruption
 Title: "TB Treatment Interruption"
 Description: "Tracking of a TB treatment interruption and patient tracing (MISAU.TB.DE.182-184)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     interrupted 0..1 MS and
     patientFound 0..1 MS and
@@ -362,5 +389,6 @@ Id: sisrme-tb-adherence-assessment-ext
 Title: "TB Follow-up Adherence Assessment"
 Description: "Follow-up-visit assessment of TB treatment adherence (MISAU.TB.DE.185-187)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETBAdherenceAssessmentVS (required)

@@ -11,6 +11,7 @@ Parent: Encounter
 Id: sisrme-prenatal-consultation
 Title: "SIS-RME Prenatal Consultation"
 Description: "A prenatal (CPN) consultation visit, per SIS-RME Data Dictionary module D (MCH Module)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)

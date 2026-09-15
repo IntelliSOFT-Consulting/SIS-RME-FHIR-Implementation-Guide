@@ -14,6 +14,7 @@ Id: sisrme-triage-priority-ext
 Title: "Triage Priority Level"
 Description: "Triage priority level assigned at appointment scheduling/admission (MISAU.G.DE8-13)."
 Context: Appointment
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMETriagePriorityVS (required)
 
@@ -22,6 +23,7 @@ Id: sisrme-exemption-reason-ext
 Title: "Reason for Fee Exemption"
 Description: "Reason(s) a patient is exempt from consultation fees (MISAU.G.DE25-35)."
 Context: Appointment
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEExemptionReasonVS (required)
 
@@ -30,6 +32,7 @@ Id: sisrme-donor-information-ref
 Title: "Donor Information (free text)"
 Description: "Free-text donor information recorded at scheduling (MISAU.G.DE36-37)."
 Context: Appointment
+* ^experimental = true
 * extension contains
     details 0..1 MS and
     membershipCardNumber 0..1 MS
@@ -42,6 +45,7 @@ Id: sisrme-appointment-transfer-origin
 Title: "Appointment Transfer Origin"
 Description: "Origin health unit for a patient referred/transferred in for this appointment (MISAU.G.DE19-22)."
 Context: Appointment
+* ^experimental = true
 * extension contains
     province 0..1 MS and
     district 0..1 MS and
@@ -59,6 +63,7 @@ Id: sisrme-visit-status-general
 Title: "General Module Visit Status"
 Description: "The patient's status within this scheduled visit (MISAU.G.DE39-40)."
 Context: Appointment
+* ^experimental = true
 * extension contains
     screeningStatus 0..1 MS and
     visitStatus 0..1 MS
@@ -71,6 +76,7 @@ Id: sisrme-appointment-removal
 Title: "Appointment Removal"
 Description: "Cancellation/rescheduling of an appointment (MISAU.G.DE41-50)."
 Context: Appointment
+* ^experimental = true
 * extension contains
     reason 0..1 MS and
     cancellationReason 0..1 MS and
@@ -89,6 +95,7 @@ Id: sisrme-admission-details
 Title: "Admission Details"
 Description: "Admission type and reason for admission (MISAU.G.DE18, DE23-24)."
 Context: Appointment
+* ^experimental = true
 * extension contains
     admissionType 0..1 MS and
     reasonForAdmission 0..1 MS and
@@ -104,6 +111,7 @@ Id: sisrme-family-dietary-psychosocial-history
 Title: "Family, Dietary, and Psychosocial History"
 Description: "Free-text family, dietary and psychosocial history (MISAU.G.DE67-84)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     foodHistory 0..1 MS and
     familyHistory 0..1 MS and
@@ -145,6 +153,7 @@ Id: sisrme-chronic-disease-assessment
 Title: "Chronic Disease Assessment"
 Description: "Chronic disease history (MISAU.G.DE54-57)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     present 0..1 MS and
     yearOfDiagnosis 0..1 MS and
@@ -160,6 +169,7 @@ Id: sisrme-allergy-assessment-general
 Title: "Allergy Assessment"
 Description: "Allergy history and details (MISAU.G.DE58-66)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     present 0..1 MS and
     drugAllergy 0..1 MS and
@@ -186,6 +196,7 @@ Id: sisrme-pediatric-personal-history-general
 Title: "Paediatric Personal History (General Module)"
 Description: "Maternal, prenatal, delivery and early-life history (MISAU.G.DE86-103)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     mothersAge 0..1 MS and
     numberOfPrenatalConsultations 0..1 MS and
@@ -230,6 +241,7 @@ Id: sisrme-current-pregnancy-status
 Title: "Current Pregnancy Status"
 Description: "Current pregnancy and breastfeeding status noted during a general consultation (MISAU.G.DE113-115)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     pregnant 0..1 MS and
     gestationalAgeWeeks 0..1 MS and
@@ -243,6 +255,7 @@ Id: sisrme-vaccination-record-entry
 Title: "Vaccination Record Entry"
 Description: "A vaccination recorded during a general consultation (MISAU.G.DE116-119)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     dose 0..1 MS and
     vaccineName 0..1 MS and
@@ -256,6 +269,7 @@ Id: sisrme-nutritional-classification
 Title: "Nutritional Classification"
 Description: "Nutritional status classifications (MISAU.G.DE140-147). BMI, weight and height are recorded as SISRMEMCHVitalSign Observations; this extension carries only the derived classification labels."
 Context: Encounter
+* ^experimental = true
 * extension contains
     weightForAge 0..1 MS and
     weightForHeightUnder2y 0..1 MS and
@@ -276,6 +290,7 @@ Id: sisrme-regional-physical-exam-adult
 Title: "Regional Physical Examination - Adult"
 Description: "Free-text adult physical examination findings by anatomical region (MISAU.G.DE166-182)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     skin 0..1 MS and
     mucousMembranes 0..1 MS and
@@ -317,6 +332,7 @@ Id: sisrme-regional-physical-exam-pediatric-general
 Title: "Regional Physical Examination - Paediatric (General Module)"
 Description: "Free-text paediatric physical examination findings by anatomical region (MISAU.G.DE185-192)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     skinAndMucousMembranes 0..1 MS and
     lymphNodes 0..1 MS and
@@ -340,6 +356,7 @@ Id: sisrme-pain-assessment-general
 Title: "Pain Assessment"
 Description: "Pain type, scale and intensity (MISAU.G.DE194-199)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     type 0..* MS and
     scale 0..1 MS and
@@ -355,6 +372,7 @@ Id: sisrme-neurological-examination-adult
 Title: "Neurological Examination - Adult"
 Description: "Neurological examination findings (MISAU.G.DE202-223); GCS total score is recorded as a SISRMEMCHVitalSign Observation."
 Context: Encounter
+* ^experimental = true
 * extension contains
     pupilDiameterSymmetry 0..1 MS and
     pupilDiameter 0..1 MS and
@@ -379,6 +397,7 @@ Id: sisrme-neurological-examination-pediatric
 Title: "Neurological Examination - Paediatric"
 Description: "Free-text paediatric neurological examination findings (MISAU.G.DE224-229)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     reflexes 0..1 MS and
     muscleTone 0..1 MS and
@@ -398,6 +417,7 @@ Id: sisrme-medical-reassessment
 Title: "Medical Reassessment"
 Description: "Medical reassessment note (MISAU.G.DE230-231)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     type 0..1 MS and
     note 0..1 MS
@@ -409,6 +429,7 @@ Id: sisrme-clinical-evolution-ext
 Title: "Clinical Evolution"
 Description: "Clinical evolution/course during the consultation or admission (MISAU.G.DE232)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEClinicalEvolutionVS (extensible)
 
@@ -417,6 +438,7 @@ Id: sisrme-general-disease-screening-flags
 Title: "General Disease Screening Flags"
 Description: "Brief serological-status and TB/malaria screening flags (MISAU.G.DE237-242)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     mothersSerologicalStatusKnown 0..1 MS and
     childsSerologicalStatusKnown 0..1 MS and
@@ -436,6 +458,7 @@ Id: sisrme-medication-side-effect
 Title: "Medication Side Effect"
 Description: "A medication side effect and its severity (MISAU.G.DE244-246)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     present 0..1 MS and
     type 0..* MS and
@@ -451,6 +474,7 @@ Id: sisrme-detailed-disease-screening-panel
 Title: "Detailed Disease Screening Panel"
 Description: "TB, STI, cervical/breast cancer, diabetes, hypertension and HIV screening, performed during a general consultation (MISAU.G.DE289-324). TB symptoms reuse the value set defined for MISAU.F (TB Module)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     tbExposureLast12Months 0..1 MS and
     tbHasSymptoms 0..1 MS and
@@ -516,6 +540,7 @@ Id: sisrme-lab-test-request-general
 Title: "General Laboratory Test Request"
 Description: "A laboratory test requested during a general consultation (MISAU.G.DE249-263), reusing the lab test priority value set defined for MISAU.F (TB Module)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     priority 0..1 MS and
     testName 0..1 MS and
@@ -540,6 +565,7 @@ Id: sisrme-lab-result-general
 Title: "General Laboratory Result"
 Description: "A laboratory result recorded during a general consultation (MISAU.G.DE261-264)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     examName 0..1 MS and
     result 0..1 MS and
@@ -553,6 +579,7 @@ Id: sisrme-imaging-request-and-result
 Title: "Imaging Request and Result"
 Description: "Radiology, MRI and ultrasound requests and results (MISAU.G.DE266-273)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     radiologyTest 0..1 MS and
     mriTest 0..1 MS and
@@ -576,6 +603,7 @@ Id: sisrme-rapid-test-result-panel
 Title: "Rapid Test Result Panel"
 Description: "Point-of-care rapid diagnostic test results (MISAU.G.DE276-281)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     malaria 0..1 MS and
     hiv 0..1 MS and
@@ -601,6 +629,7 @@ Id: sisrme-treatment-request-entry
 Title: "Treatment Request"
 Description: "A non-pharmacological treatment requested/performed during a consultation (MISAU.G.DE288-297, Request Treatment)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     treatmentName 0..1 MS and
     observations 0..1 MS and
@@ -621,6 +650,7 @@ Id: sisrme-discharge-summary
 Title: "Discharge Summary"
 Description: "Discharge details, outcome and destination (MISAU.G.DE288-323, Discharge)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     admissionDate 0..1 MS and
     dischargeDate 0..1 MS and
@@ -676,6 +706,7 @@ Id: sisrme-patient-transfer-record
 Title: "Patient Transfer Record"
 Description: "A patient admission/transfer/reference event, including receipt at the destination (MISAU.G.DE325-357, Transfer Patient)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     admissionType 0..1 MS and
     ward 0..1 MS and
@@ -738,6 +769,7 @@ Id: sisrme-diagnosis-type-ext
 Title: "Type of Diagnosis"
 Description: "Whether this diagnosis is provisional or confirmed (MISAU.G.DE284-286)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEDiagnosisTypeVS (required)
 
@@ -746,6 +778,7 @@ Id: sisrme-diagnosis-service
 Title: "Diagnosis Service"
 Description: "The service under which the diagnosis was recorded (MISAU.G.DE282)."
 Context: Condition
+* ^experimental = true
 * value[x] only string
 
 Extension: SISRMEDiagnosisStadium
@@ -753,5 +786,6 @@ Id: sisrme-diagnosis-stadium
 Title: "Diagnosis Stadium"
 Description: "T/S staging classification for the diagnosis (MISAU.G.DE288)."
 Context: Condition
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEStadiumVS (required)

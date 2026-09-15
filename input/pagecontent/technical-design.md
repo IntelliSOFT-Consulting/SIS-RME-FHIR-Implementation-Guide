@@ -1,4 +1,4 @@
-# Design Notes
+# Technical Design Notes
 
 This page documents the modeling conventions used across this IG, so that implementers extending it in future can stay consistent, and so that reviewers can understand the judgment calls that were made.
 

@@ -14,6 +14,7 @@ Id: sisrme-pregnancy-registration
 Title: "Pregnancy Registration"
 Description: "Registration details for the current pregnancy (MISAU.D, Registration/Admission)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     lmp 0..1 MS and
     gestationalAgeWeeks 0..1 MS and
@@ -38,6 +39,7 @@ Id: sisrme-previous-pregnancy-history
 Title: "Previous Pregnancy History"
 Description: "Details of the most recent previous pregnancy (MISAU.D, Obstetric History)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     year 0..1 MS and
     type 0..1 MS and
@@ -83,6 +85,7 @@ Id: sisrme-obstetric-summary
 Title: "Obstetric Summary (GPACE)"
 Description: "Cumulative obstetric history summary (MISAU.D, Obstetric History)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     gravidity 0..1 MS and
     parity 0..1 MS and
@@ -108,6 +111,7 @@ Id: sisrme-prenatal-risk-flag-present
 Title: "Prenatal Risk Flag Present"
 Description: "A risk factor identified during history-taking at prenatal consultation (MISAU.D, Obstetric History)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPrenatalRiskFlagVS (required)
 
@@ -116,6 +120,7 @@ Id: sisrme-obstetric-examination
 Title: "Obstetric Examination"
 Description: "Findings from the obstetric physical examination (MISAU.D, Obstetric Examination). Uterine height and fetal heart rate are recorded as SISRMEMCHVitalSign Observations rather than here."
 Context: Encounter
+* ^experimental = true
 * extension contains
     evaluationDate 0..1 MS and
     gestationalAgeAtExamWeeks 0..1 MS and
@@ -146,6 +151,7 @@ Id: sisrme-prenatal-lab-request
 Title: "Prenatal Laboratory Request"
 Description: "A laboratory test requested at prenatal consultation (MISAU.D, Laboratory Requests)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPrenatalLabTestVS (required)
 
@@ -154,6 +160,7 @@ Id: sisrme-prenatal-lab-result
 Title: "Prenatal HIV Test Results"
 Description: "HIV test results at prenatal consultation, for the patient and partner (MISAU.D.DE97-99)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     rapidHIVResult 0..1 MS and
     partnerHIVResult 0..1 MS
@@ -167,6 +174,7 @@ Id: sisrme-prenatal-prophylaxis-prescribed
 Title: "Prenatal Prophylaxis/Treatment Prescribed"
 Description: "A prophylaxis/treatment medication prescribed at prenatal consultation (MISAU.D, Prophylaxis & treatment)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPrenatalProphylaxisVS (required)
 
@@ -175,6 +183,7 @@ Id: sisrme-prevention-measures
 Title: "Prevention Measures"
 Description: "Malaria prevention measures (MISAU.D, Prevention)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     mosquitoNetReceived 0..1 MS and
     sleptUnderNetPreviousNight 0..1 MS
@@ -186,6 +195,7 @@ Id: sisrme-prenatal-allergy
 Title: "Prenatal Allergy"
 Description: "An allergy recorded at prenatal consultation (MISAU.D, Allergy)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     type 1..1 MS and
     otherSpecify 0..1 MS
@@ -198,6 +208,7 @@ Id: sisrme-prenatal-vaccination
 Title: "Prenatal Vaccination"
 Description: "A vaccine dose administered during pregnancy (MISAU.D, Vaccination)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     vaccine 1..1 MS and
     doseNumber 0..1 MS and
@@ -215,6 +226,7 @@ Id: sisrme-maternal-postpartum-assessment
 Title: "Maternal Postpartum Assessment"
 Description: "Overall postpartum diagnosis and breastfeeding/nutrition status of the mother (MISAU.D, Postnatal Consultation)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     postpartumDiagnosis 0..1 MS and
     otherPathologies 0..1 MS and
@@ -235,6 +247,7 @@ Id: sisrme-postpartum-malaria-assessment
 Title: "Postpartum Malaria Assessment"
 Description: "Malaria screening and diagnosis at postnatal consultation (MISAU.D.DE82-84)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     symptomsSuggestive 0..1 MS and
     rdtRequested 0..1 MS and
@@ -249,6 +262,7 @@ Id: sisrme-postpartum-syphilis-assessment
 Title: "Postpartum Syphilis Assessment"
 Description: "Syphilis screening and diagnosis at postnatal consultation (MISAU.D.DE85-89)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     statusAtAdmission 0..1 MS and
     screeningPerformed 0..1 MS and
@@ -268,6 +282,7 @@ Id: sisrme-postpartum-hiv-assessment
 Title: "Postpartum HIV Assessment"
 Description: "HIV status, ART and screening assessment at postnatal consultation, for the mother and partner (MISAU.D.DE90-96)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     seroStatusAtAdmission 0..1 MS and
     onARTAtEntryOtherFacility 0..1 MS and
@@ -292,6 +307,7 @@ Id: sisrme-postpartum-tb-assessment
 Title: "Postpartum TB Assessment"
 Description: "TB screening and diagnosis at postnatal consultation (MISAU.D.DE97-98)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     screeningPerformed 0..1 MS and
     diagnosis 0..1 MS
@@ -304,6 +320,7 @@ Id: sisrme-postpartum-family-planning
 Title: "Postpartum Family Planning"
 Description: "Family planning counselling and method initiated at postnatal consultation (MISAU.D.DE99-101), reusing the family planning method value set defined for MISAU.C (HIV Module)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     counsellingPerformed 0..1 MS and
     methodInitiated 0..1 MS and
@@ -318,6 +335,7 @@ Id: sisrme-postpartum-lab-and-treatment-summary
 Title: "Postpartum Laboratory and Treatment Summary"
 Description: "Laboratory tests requested and treatment/observations at postnatal consultation (MISAU.D.DE102-105)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     labTestRequested 0..1 MS and
     treatmentPerformed 0..1 MS and
@@ -333,6 +351,7 @@ Id: sisrme-postpartum-medication-prescribed
 Title: "Postpartum Medication Prescribed"
 Description: "A medication prescribed at postnatal consultation, for the mother (MISAU.D, Prescription)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPostpartumMedicationVS (required)
 
@@ -341,6 +360,7 @@ Id: sisrme-newborn-assessment
 Title: "Newborn Assessment"
 Description: "Clinical assessment of the newborn recorded on the mother's postnatal consultation record (MISAU.D.DE146-160). Note: in a full implementation the newborn should be registered as their own SISRMEPatient with their own Encounter; this extension follows the source system's flat, single-form capture of both mother and newborn data on one postnatal visit record."
 Context: Encounter
+* ^experimental = true
 * extension contains
     generalCondition 0..1 MS and
     newbornStatus 0..1 MS and
@@ -381,6 +401,7 @@ Id: sisrme-newborn-infection-screening
 Title: "Newborn Infection Screening"
 Description: "Congenital syphilis and TB exposure screening for the newborn (MISAU.D.DE161-168)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     syphilisScreeningPerformed 0..1 MS and
     congenitalSyphilis 0..1 MS and
@@ -407,6 +428,7 @@ Id: sisrme-newborn-vaccination
 Title: "Newborn Vaccination"
 Description: "BCG and OPV vaccination of the newborn (MISAU.D.DE169-173)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     bcgGiven 0..1 MS and
     bcgDate 0..1 MS and
@@ -424,6 +446,7 @@ Id: sisrme-newborn-lab-and-conduct-plan
 Title: "Newborn Laboratory Request and Conduct Plan"
 Description: "Laboratory tests requested for the newborn and observations/conduct plan (MISAU.D.DE174-175)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     labTestRequested 0..1 MS and
     observationsConductPlan 0..1 MS
@@ -435,6 +458,7 @@ Id: sisrme-newborn-medication-prescribed
 Title: "Newborn Medication Prescribed"
 Description: "A medication prescribed to the newborn (MISAU.D.DE176-180)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMENewbornMedicationVS (required)
 
@@ -445,6 +469,7 @@ Id: sisrme-past-pathological-history
 Title: "Past Pathological History"
 Description: "Past pathological/allergy history (MISAU.D.DE193-206)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     chronicDiseases 0..1 MS and
     medicationAllergies 0..1 MS and
@@ -464,6 +489,7 @@ Id: sisrme-psychosocial-history
 Title: "Psychosocial History"
 Description: "Household psychosocial history (MISAU.D.DE207-215)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     alcoholUseHousehold 0..1 MS and
     tobaccoUseHousehold 0..1 MS and
@@ -477,6 +503,7 @@ Id: sisrme-personal-paediatric-neonatal-history
 Title: "Personal Paediatric/Neonatal History"
 Description: "Birth history, shown only for children under 2 years of age (MISAU.D.DE216-221)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     birthWeight 0..1 MS and
     gestationalAgeAtBirth 0..1 MS and
@@ -494,6 +521,7 @@ Id: sisrme-review-of-systems
 Title: "Review of Systems"
 Description: "Free-text review of systems by body system (MISAU.D.DE232-239)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     general 0..1 MS and
     respiratoryAndCardiovascular 0..1 MS and
@@ -517,6 +545,7 @@ Id: sisrme-pediatric-danger-sign-present
 Title: "Paediatric General Danger Sign Present"
 Description: "An IMCI general danger sign identified on examination (MISAU.D.DE242-246)."
 Context: Encounter
+* ^experimental = true
 * value[x] only CodeableConcept
 * valueCodeableConcept from SISRMEPediatricDangerSignVS (required)
 
@@ -525,6 +554,7 @@ Id: sisrme-general-state-and-biotype
 Title: "General State and Biotype"
 Description: "Overall clinical general state and constitutional body type (MISAU.D.DE266-274)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     generalState 0..1 MS and
     biotype 0..1 MS
@@ -538,6 +568,7 @@ Id: sisrme-pulse-assessment
 Title: "Pulse Assessment (per site)"
 Description: "A pulse assessment at one anatomical site, repeatable per site examined (MISAU.D.DE283-294)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     site 1..1 MS and
     rate 0..1 MS and
@@ -555,6 +586,7 @@ Id: sisrme-regional-physical-exam
 Title: "Regional Physical Examination"
 Description: "Free-text physical examination findings by anatomical region (MISAU.D.DE297-305)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     skin 0..1 MS and
     mucousMembranes 0..1 MS and
@@ -580,6 +612,7 @@ Id: sisrme-abnormal-masses
 Title: "Abnormal Masses"
 Description: "Whether abnormal masses were found on examination, and details (MISAU.D.DE306-309)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     present 0..1 MS and
     details 0..1 MS
@@ -591,6 +624,7 @@ Id: sisrme-disease-screening-pediatric
 Title: "Paediatric Disease Screening"
 Description: "HIV and TB screening performed during a paediatric consultation (MISAU.D.DE295-296), reusing the screening result value set defined for MISAU.C (HIV Module)."
 Context: Encounter
+* ^experimental = true
 * extension contains
     hiv 0..1 MS and
     tb 0..1 MS

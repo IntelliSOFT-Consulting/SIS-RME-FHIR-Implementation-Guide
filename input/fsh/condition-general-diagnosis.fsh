@@ -8,6 +8,7 @@ Parent: Condition
 Id: sisrme-diagnosis-record
 Title: "SIS-RME Diagnosis Record"
 Description: "A diagnosis recorded during a consultation, per SIS-RME Data Dictionary module G (General Module, Diagnosis)."
+* ^experimental = true
 
 * subject 1..1 MS
 * subject only Reference(SISRMEPatient)
