@@ -88,6 +88,9 @@ Usage: #example
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
 * reasonCode.text = "Routine ART follow-up"
+* period.start = "2026-06-15T08:30:00+02:00"
+* period.end = "2026-06-15T09:15:00+02:00"
+* episodeOfCare = Reference(ProgramEnrollmentARTExample)
 * extension[artHistory].extension[priorARVUse].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[artHistory].extension[everAttendedARTClinic].valueCodeableConcept = $v2-0532#Y "Yes"
 * extension[artInitiation].extension[artStartDate].valueDate = "2023-04-02"
